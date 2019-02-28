@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "http://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd">
+<pmc-articleset><article xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article">
+  <?properties open_access?>
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">Nat Commun</journal-id>
+      <journal-id journal-id-type="iso-abbrev">Nat Commun</journal-id>
+      <journal-title-group>
+        <journal-title>Nature Communications</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2041-1723</issn>
+      <publisher>
+        <publisher-name>Nature Pub. Group</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="pmid">25998442</article-id>
+      <article-id pub-id-type="pmc">4455068</article-id>
+      <article-id pub-id-type="pii">ncomms8212</article-id>
+      <article-id pub-id-type="doi">10.1038/ncomms8212</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>PI3K/mTORC2 regulates TGF-&#x3B2;/Activin signalling by modulating Smad2/3 activity via linker phosphorylation</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Yu</surname>
+            <given-names>Jason S. L.</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ramasamy</surname>
+            <given-names>Thamil Selvee</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+          <xref ref-type="author-notes" rid="n1">*</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Murphy</surname>
+            <given-names>Nick</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Holt</surname>
+            <given-names>Marie K.</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Czapiewski</surname>
+            <given-names>Rafal</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+          <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-0211-8435</contrib-id>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Wei</surname>
+            <given-names>Shi-Khai</given-names>
+          </name>
+          <xref ref-type="aff" rid="a1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Cui</surname>
+            <given-names>Wei</given-names>
+          </name>
+          <xref ref-type="corresp" rid="c1">a</xref>
+          <xref ref-type="aff" rid="a1">1</xref>
+        </contrib>
+        <aff id="a1"><label>1</label><institution>Department of Surgery and Cancer, Institute of Reproductive and Developmental Biology, Imperial College London</institution>, Du Cane Road, London W12 0NN, <country>UK</country></aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="c1">
+          <label>a</label>
+          <email>wei.cui@imperial.ac.uk</email>
+        </corresp>
+        <fn id="n1">
+          <label>*</label>
+          <p>Present address: Department of Molecular Medicine, Faculty of Medicine, University of Malaya, 50603 Kuala Lumpur, Malaysia</p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>22</day>
+        <month>05</month>
+        <year>2015</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <year>2015</year>
+      </pub-date>
+      <volume>6</volume>
+      <elocation-id>7212</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>18</day>
+          <month>12</month>
+          <year>2014</year>
+        </date>
+        <date date-type="accepted">
+          <day>20</day>
+          <month>04</month>
+          <year>2015</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright &#xA9; 2015, Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.</copyright-statement>
+        <copyright-year>2015</copyright-year>
+        <copyright-holder>Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.</copyright-holder>
+        <license xmlns:xlink="http://www.w3.org/1999/xlink" license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
+          <!--author-paid-->
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License. The images or other third party material in this article are included in the article's Creative Commons license, unless indicated otherwise in the credit line; if the material is not included under the Creative Commons license, users will need to obtain permission from the license holder to reproduce the material. To view a copy of this license, visit <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link></license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Crosstalk between the phosphatidylinositol 3-kinase (PI3K) and the transforming growth factor-&#x3B2; signalling pathways play an important role in regulating many cellular functions. However, the molecular mechanisms underpinning this crosstalk remain unclear. Here, we report that PI3K signalling antagonizes the Activin-induced definitive endoderm (DE) differentiation of human embryonic stem cells by attenuating the duration of Smad2/3 activation via the mechanistic target of rapamycin complex 2 (mTORC2). Activation of mTORC2 regulates the phosphorylation of the Smad2/3-T220/T179 linker residue independent of Akt, CDK and Erk activity. This phosphorylation primes receptor-activated Smad2/3 for recruitment of the E3 ubiquitin ligase Nedd4L, which in turn leads to their degradation. Inhibition of PI3K/mTORC2 reduces this phosphorylation and increases the duration of Smad2/3 activity, promoting a more robust mesendoderm and endoderm differentiation. These findings present a new and direct crosstalk mechanism between these two pathways in which mTORC2 functions as a novel and critical mediator.</p>
+      </abstract>
+      <abstract abstract-type="web-summary">
+        <p>
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="i1" xlink:href="ncomms8212-i1.jpg"/>Although crosstalk between the phosphatidylinositol 3-kinase (PI3K) and transforming growth factor-&#x3B2; pathways is important, the mechanism is obscure. Here, Yu <italic>et al</italic>. show that activation of mTORC2 downstream of PI3K leads to the linker phosphorylation of Smad2/3 and their ubiquitin-dependent degradation.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <p>Cytokines of the transforming growth factor-&#x3B2; (TGF-&#x3B2;) superfamily including Nodal and Activin, control many cellular functions, such as cell growth, apoptosis and cell fate determination. These functions are not only controlled by the TGF-&#x3B2; pathway itself but are also extensively regulated by crosstalk between TGF-&#x3B2; and other signalling pathways<xref ref-type="bibr" rid="b1">1</xref><xref ref-type="bibr" rid="b2">2</xref><xref ref-type="bibr" rid="b3">3</xref>. TGF-&#x3B2;/Activin signalling is initiated upon ligand binding and activation of receptor complexes, which leads to the phosphorylation of the Smad2 and Smad3 (henceforth Smad2/3) C-terminal SxS motif, promoting their interaction with Smad4 and facilitating the translocation of the Smad2/3&#x2013;Smad4 complexes to and accumulation within the nucleus where they regulate targeted gene expression in cooperation with other cofactors<xref ref-type="bibr" rid="b4">4</xref><xref ref-type="bibr" rid="b5">5</xref><xref ref-type="bibr" rid="b6">6</xref>. The efficacy of this pathway is not solely determined by the abundance of ligands and receptors but is also influenced by other signalling pathways<xref ref-type="bibr" rid="b3">3</xref>. Notably, the phosphatidylinositol 3-kinase (PI3K) pathway has been shown to alleviate TGF-&#x3B2;-induced apoptosis and cell cycle arrest in several tumour cell lines<xref ref-type="bibr" rid="b7">7</xref><xref ref-type="bibr" rid="b8">8</xref><xref ref-type="bibr" rid="b9">9</xref><xref ref-type="bibr" rid="b10">10</xref>, as well as inhibiting the Activin-induced DE differentiation of human embryonic stem cells (hESCs)<xref ref-type="bibr" rid="b11">11</xref><xref ref-type="bibr" rid="b12">12</xref><xref ref-type="bibr" rid="b13">13</xref>. However, the molecular mechanisms behind these effects remain contentious<xref ref-type="bibr" rid="b8">8</xref><xref ref-type="bibr" rid="b9">9</xref><xref ref-type="bibr" rid="b10">10</xref>. Although it has recently been proposed that the negative effects of PI3K upon DE differentiation are an indirect effect attributed to the inhibition of the Wnt-&#x3B2;-catenin pathway<xref ref-type="bibr" rid="b14">14</xref>, it is unclear how this mechanism results in enhanced Smad2/3 activity, thereby positing the existence of a more direct relationship between these two pathways<xref ref-type="bibr" rid="b15">15</xref>.</p>
+    <p>In this study, we demonstrate that PI3K signalling has a direct inhibitory effect on Activin-induced Smad2/3 activity in hESCs via the activation of mechanistic target of rapamycin complex 2 (mTORC2), leading to a reduction of Smad2/3 transcriptional activity and DE differentiation efficacy. PI3K/mTORC2 negatively regulates Smad2/3 activity by modulating their degradation via phosphorylation of a particular threonine residue within the Smad2/3 linker region. Our results therefore demonstrate a new and novel mechanism underpinning the crosstalk between the PI3K/mTOR and TGF-&#x3B2;/Activin signalling axes and in particular, firmly establishes mTORC2 as a critical mediator in modulating Smad2/3 activity.</p>
+    <sec disp-level="1" sec-type="results">
+      <title>Results</title>
+      <sec disp-level="2">
+        <title>PI3K inhibits Activin-induced DE differentiation of hESCs</title>
+        <p>To decipher the mechanisms underlying the antagonistic impact of the PI3K pathway upon TGF-&#x3B2;/Activin activities and the DE differentiation of hESCs, we developed a serum-free and chemically defined culture condition to convert hESCs to DE, in which high-dosage Activin A (henceforth AA) was shown to enhance the activation of Smad2/3 signalling and DE differentiation as previously reported (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 1a</xref>; <xref ref-type="fig" rid="f1">Fig. 1a</xref>)<xref ref-type="bibr" rid="b11">11</xref><xref ref-type="bibr" rid="b12">12</xref><xref ref-type="bibr" rid="b16">16</xref>. Under this culture condition, treatment of hESCs with LY294002 (LY), a PI3K inhibitor, diminished Akt activation even in the presence of AA (<xref ref-type="fig" rid="f1">Fig. 1b</xref>). In comparison with the differentiation using AA alone, co-treatment of hESCs with AA and LY evidently enhanced the Activin-induced DE differentiation as shown by a higher expression of mesendoderm and DE markers (<xref ref-type="fig" rid="f1">Fig. 1c&#x2013;f</xref>). This LY-dependent enhancement of DE differentiation was further corroborated by an increase in the generation of functional hepatocyte-like cells and in multiple hESC lines (<xref ref-type="fig" rid="f1">Fig. 1g</xref>; <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 1b,c</xref>). Therefore, this chemically defined culture system provides a useful platform from which to further interrogate the underlying molecular mechanisms driving the improvement of DE specification.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Inhibiting PI3K prolongs Activin-induced Smad2/3 activation</title>
+        <p>To interrogate the mechanisms through which PI3K signalling interferes with TGF-&#x3B2; activities, we first evaluated the activation status of Smad2/3 under AA&#xB1;LY conditions. Time-course analysis revealed that although LY treatment had no effect on the initial activation of Smad2/3 (Smad2/3-pTail), the decline of active Smad2/3 was clearly attenuated in AA&#x2013;LY-treated cells compared with cells treated with AA alone (<xref ref-type="fig" rid="f2">Fig. 2a</xref>), resulting in a marked increase of active Smad2/3 six hours post treatment (<xref ref-type="fig" rid="f2">Fig. 2b</xref>). AA&#x2013;LY-treated cells also exhibited a significant increase in Smad2/3 transcriptional activity evidenced by higher luciferase reporter activity (<xref ref-type="fig" rid="f2">Fig. 2c</xref>) and a considerable upregulation of mesendoderm markers MixL1, Eomes and goosecoid and DE marker Sox17, which are known Smad2/3 targets (<xref ref-type="fig" rid="f2">Fig. 2d</xref>)<xref ref-type="bibr" rid="b1">1</xref><xref ref-type="bibr" rid="b17">17</xref><xref ref-type="bibr" rid="b18">18</xref>. This finding implies preferential specification of the cells towards the mesendoderm and DE even at this early stage of differentiation. Furthermore, to rule out the possibility that these enhancements were due to any off-target effects of LY, we treated hESCs with two other PI3K inhibitors in the place of LY, the more commonly used wortmannin and the more selective Pictilisib (also known as GDC-0941). Both experiments largely replicated the changes observed using AA&#x2013;LY treatment (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 2</xref>) Therefore, inhibition of PI3K directly enhances Activin-induced DE formation by extending the duration of Smad2/3 activity.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>PI3K modulates ubiquitination and degradation of Smad2/3</title>
+        <p>Since inhibition of PI3K extended the duration of Smad2/3 activation rather than altering their initial response to AA, we reasoned that PI3K signalling might affect Smad2/3 activity by regulating its turnover, either via phosphatase-mediated dephosphorylation of the SxS motif or by ubiquitin-mediated proteasomal degradation of the active Smad2/3 protein<xref ref-type="bibr" rid="b2">2</xref>. Until recently, nuclear PPM1A was the only phosphatase identified to dephosphorylate Smad2/3 at the SxS motif<xref ref-type="bibr" rid="b19">19</xref>, which is inhibited by CLIC4 (chloride intracellular channel 4) protein<xref ref-type="bibr" rid="b20">20</xref>. However, not only did LY treatment not affect the expression of either protein, PPM1A was also detected primarily in the cytoplasm (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 3a,b</xref>). It is therefore unlikely that Smad2/3 dephosphorylation by PPM1A is the mechanism accounting for the phenotypic changes associated with AA&#x2013;LY treatment. Although one recent study has shown that PP5, a member of the PPP phosphatase family, is able to dephosphorylate active Smad2/3 upon overexpression<xref ref-type="bibr" rid="b21">21</xref>, treatment of hESCs with okadaic acid, a potent inhibitor of PPP phosphatases, had no effect on the decay kinetics of active Smad2 (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 3c</xref>). Furthermore, enhanced TGF-&#x3B2;-induced transcriptional responses that were observed in PP5-null mice has been shown to result from increased levels of Smad3 protein rather than through any direct effect upon the duration of their activation<xref ref-type="bibr" rid="b21">21</xref>. These findings therefore further discount the involvement of phosphatases in our underlying mechanism.</p>
+        <p>Given that ubiquitin-mediated proteasomal degradation is another mechanism by which Smad2/3 activity is terminated<xref ref-type="bibr" rid="b22">22</xref>, we next investigated whether LY acts to protect active Smad2 from proteasomal degradation. Similar decay kinetics for active Smad2 was observed between LY- and MG132-treated cells, albeit not with the same efficacy (<xref ref-type="fig" rid="f3">Fig. 3a&#x2013;c</xref>). In addition, inhibition of the Activin receptor by SB431542 did not abolish the effect of LY, but rather made it observable much earlier at 1&#x2009;h post treatment (<xref ref-type="fig" rid="f3">Fig. 3b</xref>). Together, this suggests that PI3K affects the TGF-&#x3B2;/Activin pathway independent of receptor activity and acts to promote the ubiquitin-mediated proteasomal degradation of active Smad2/3. Although Nedd4L has been previously identified as the ubiquitin ligase responsible for Smad2/3 ubiquitination<xref ref-type="bibr" rid="b23">23</xref>, we observed no LY-dependent changes in its expression (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 3d</xref>). However, LY treatment substantially reduced its interaction with Smad2 (<xref ref-type="fig" rid="f3">Fig. 3d</xref>), which was corroborated by decreased ubiquitination of Smad2 (<xref ref-type="fig" rid="f3">Fig. 3e</xref>). These results therefore highlight the critical role PI3K signalling plays in regulating the association of Nedd4L with Smad2/3, which in turn, dictates the duration and efficacy of Smad2/3 activity.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>PI3K primes Smad2/3 interaction with Nedd4L via pT220/T179</title>
+        <p>Although activation of TGF-&#x3B2;/Activin signalling is primarily determined by the receptor-mediated phosphorylation of Smad2/3 C-terminal SxS motif that induces their accumulation within the nucleus, it is increasingly apparent that the linker region of Smad2/3 serves a critical site through which their activity is regulated. This region contains multiple S/T residues, which are targeted by various S/T kinases stemming from other signalling pathways<xref ref-type="bibr" rid="b24">24</xref><xref ref-type="bibr" rid="b25">25</xref><xref ref-type="bibr" rid="b26">26</xref><xref ref-type="bibr" rid="b27">27</xref><xref ref-type="bibr" rid="b28">28</xref>. Phosphorylation of these residues alters the interaction of Smad2/3 with other proteins, which subsequently affects Smad2/3 stability, translocation and transcriptional activity<xref ref-type="bibr" rid="b3">3</xref><xref ref-type="bibr" rid="b23">23</xref><xref ref-type="bibr" rid="b29">29</xref><xref ref-type="bibr" rid="b30">30</xref>. Recruitment of Nedd4L to Smad2/3 was shown to be dependent on the phosphorylation status of their linker T220/T179 residue, which lies directly upstream of the PPXY-binding motif (<xref ref-type="fig" rid="f4">Fig. 4a</xref>)<xref ref-type="bibr" rid="b23">23</xref>. Therefore, we anticipated that PI3K signalling might affect Smad2/3 degradation through altering the phosphorylation of this residue. Indeed, LY treatment significantly reduced the phosphorylation of T220/T179, irrespective of Smad2/3 activation, but had negligible effects on the other linker serine residues in both hESC and tumour cell lines (<xref ref-type="fig" rid="f4">Fig. 4b&#x2013;d</xref>; <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 4a&#x2013;e</xref>). This suggests that Smad2/3 linker threonine and serine residues are differentially regulated, with PI3K specifically modulating the phosphorylation of the T220/T179 linker residue. Our results also demonstrate that PI3K-mediated phosphorylation of this residue can occur in the absence of Smad2/3 activation (<xref ref-type="fig" rid="f5">Fig. 5a,d</xref>), which raised the question as to whether Nedd4L binds to both active and inactive Smad2/3 or solely to the active form. To address this, PC3 cells, which retain high levels of PI3K signalling even after overnight starvation due to the presence of a PTEN mutation, were used for Nedd4L co-immunoprecipitation experiments upon treatment with AA&#xB1;LY post starvation. This showed that Nedd4L recruitment and ubiquitination of Smad2/3 occurred most effectively only when both T220/T179 and SxS residues were phosphorylated (<xref ref-type="fig" rid="f4">Fig. 4e</xref>), offering an explanatory mechanism by which Nedd4L selectively targets active Smad2/3 for ubiquitination and turnover.</p>
+        <p>We hence postulated that PI3K promotes phosphorylation of Smad2/3-T220/T179 and primes Smad2/3 for the binding of Nedd4L upon activation, resulting in increased ubiquitin-mediated Smad2/3 degradation, which acts to reduce the transcriptional activation of endoderm genes. If this is correct, mutagenesis of T220/T179 to a non-phosphorylatable residue should enhance the resistance of Smad2/3 to degradation independent of LY. To test this, we ectopically expressed wild-type (WT) or T220V mutant Smad2 in hESCs and PC3 cells. PC3 cells expressing Smad2-T220V showed higher Smad2/3 activation upon AA stimulation irrespective of whether LY was present (<xref ref-type="fig" rid="f4">Fig. 4f</xref>) and correspondingly, hESCs expressing Smad2-T220V exhibited improved mesendoderm differentiation in response to AA alone (<xref ref-type="fig" rid="f4">Fig. 4g</xref>). In further support of the view that Nedd4L-mediated degradation of active Smad2/3 accounts for the inhibitory effect of PI3K during Activin-induced DE differentiation, Nedd4L knockdown in PC3 cells resulted in increased Smad2/3 activation in the absence of LY (<xref ref-type="fig" rid="f4">Fig. 4h</xref>; <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 4f</xref>), while Nedd4L-deficient hESCs expressed endoderm genes at much higher levels upon AA stimulation (<xref ref-type="fig" rid="f4">Fig. 4i</xref>). Taken together, PI3K signalling therefore inhibits Activin-induced DE differentiation by phosphorylating the T220/T179 of Smad2/3, enabling the recruitment of Nedd4L upon their activation, which leads to the degradation and termination of active Smad2/3.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Smad2/3-pT220/pT179 is a direct effect of PI3K activity</title>
+        <p>Although many kinases including Erk (extracellular-signal-regulated kinases), p38 and CDK (cyclin-dependent kinase) have been shown to phosphorylate Smad2/3 linker residues<xref ref-type="bibr" rid="b24">24</xref><xref ref-type="bibr" rid="b26">26</xref><xref ref-type="bibr" rid="b27">27</xref><xref ref-type="bibr" rid="b30">30</xref>, inhibitors that specifically target these kinases were less effective in suppressing T220/T179 phosphorylation when compared with LY (<xref ref-type="fig" rid="f5">Fig. 5a,b</xref>; <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 5a</xref>). Notably, flavopiridol-mediated inhibition of CDKs only diminished the phosphorylation of the linker serine residues, whereas the T220/T179 residue was unaffected. Furthermore, PI3K-mediated phosphorylation of T220/T179 requires neither Smad2/3 activation nor nuclear localization, which thereby eliminates the direct involvement of CDK in causing this effect. Although active Erk can phosphorylate the T220/T179 residue, inhibition of PI3K elicited a greater reduction in T220/T179 phosphorylation than that of MAPK/Erk inhibition. In addition, LY treatment did not inhibit, but rather increased Erk activation under certain conditions (<xref ref-type="fig" rid="f5">Fig. 5c</xref>; <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 5a&#x2013;c</xref>)<xref ref-type="bibr" rid="b14">14</xref>, which therefore excludes the possibility of LY-induced downregulation of T220/T179 phosphorylation being an Erk-related event. Furthermore, treatment of hESCs in RPMI base media along with heregulin and IGF-1 (HI), two potent stimulators of the PI3K pathway, increased T220/T179 phosphorylation (<xref ref-type="fig" rid="f5">Fig. 5d</xref>), suggesting that this phosphorylation is regulated by the PI3K pathway itself independent of Erk and CDK activity.</p>
+        <p>Since Akt is one of the principal kinases acting downstream of PI3K, we next investigated whether Akt was responsible for T220/T179 phosphorylation by ectopically expressing constitutively active (Myr-Akt-WT), partially active (S473A) and inactive (K179M/T308A/S473A) Akt in Hep3B cells, using green fluorescent protein (GFP)-expressing Hep3B as controls. In comparison with the marked upregulation and reduction of T220/T179 phosphorylation observed in control cells upon heregulin and IGF-1 and LY treatment, respectively, expression of Akt possessing varying states of activation had negligible impact on T220/T179 phosphorylation (<xref ref-type="fig" rid="f5">Fig. 5e</xref>), suggesting that Akt is not directly responsible for this phosphorylation. This was further confirmed by an <italic>in vitro</italic> kinase assay that demonstrated the inability of fully active Akt to phosphorylate this residue (<xref ref-type="fig" rid="f5">Fig. 5f</xref>), which is consistent with previous findings<xref ref-type="bibr" rid="b8">8</xref><xref ref-type="bibr" rid="b9">9</xref><xref ref-type="bibr" rid="b10">10</xref>.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>mTORC2 induces the phosphorylation of Smad2/3-T220/T179</title>
+        <p>The mTOR branches of the PI3K signalling pathway acts to regulate cell growth, differentiation and metabolism. mTOR is the kinase component of two distinct multi-protein complexes, mTORC1 and mTORC2, which differ not only in their constituent components, but also in their response to rapamycin<xref ref-type="bibr" rid="b31">31</xref>. mTORC1 contains an adaptor protein, raptor, as a key subunit, while mTORC2 comprises rictor as its novel component; while mTORC1 activity is rapidly inhibited by rapamycin, mTORC2 is more resistant to acute rapamycin exposure<xref ref-type="bibr" rid="b32">32</xref>. To investigate whether mTOR complexes are involved in Smad2/3 regulation, PC3 cells were treated with AA in the presence of rapamycin or Torin-2 (henceforth Torin), an mTOR inhibitor that inhibits both complexes. While rapamycin showed no obvious effects on both Smad2 activation and T220/T179 phosphorylation (<xref ref-type="fig" rid="f6">Fig. 6a</xref>), Torin treatment mimicked that of LY in prolonging Smad2 activation and inhibiting T220/T179 phosphorylation (<xref ref-type="fig" rid="f6">Fig. 6b</xref>), thereby suggesting that mTORC2, rather than mTORC1, is involved in the regulation of Smad2/3 activity. In support of this notion, phosphorylation of T220/T179 was shown to be downregulated in rictor knockdown PC3 cells (<xref ref-type="fig" rid="f6">Fig. 6c</xref>) and this reduction of pT220/pT179 appeared more evident in MEFs (mouse embryonic fibroblasts) that were derived from rictor null mice (<xref ref-type="fig" rid="f6">Fig. 6d</xref>)<xref ref-type="bibr" rid="b33">33</xref>. The difference between rictor knockdown and rictor null cells could be due to the incomplete removal of rictor in the former as we have shown that PI3K/mTORC2-dependent phosphorylation of T220/179 is highly sensitive to any trace amount of PI3K/mTORC2 activity (<xref ref-type="fig" rid="f5">Fig. 5d</xref> vs <xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 5b</xref>). Furthermore, this downregulation of T220/T179 phosphorylation in rictor null cells was fully rescued by the ectopic expression of human rictor (<xref ref-type="fig" rid="f6">Fig. 6d</xref>), highlighting the important role mTORC2 plays in regulating Smad2/3-T220/T179 phosphorylation. Moreover, hESCs expressing rictor short hairpin RNA (shRNA) exhibited improved DE differentiation in response to AA treatment evidenced by rapid morphological changes and increased expression of DE markers, effects that are reminiscent of those observed upon AA&#x2013;LY treatment (<xref ref-type="fig" rid="f6">Fig. 6e,f</xref>). Therefore, these results suggest that mTORC2 plays an important role in modulating Activin-induced Smad2/3 activity by modifying the phosphorylation of the Smad2/3 linker T220/T179 residue. Intriguingly, immunoprecipitated mTORC2 was unable to phosphorylate Smad2-T220 in an <italic>in vitro</italic> kinase reaction (<xref ref-type="fig" rid="f6">Fig. 6g</xref>), while inhibition of SGK1, one of the limited substrates identified to be regulated by mTORC2 (refs <xref ref-type="bibr" rid="b34">34</xref>, <xref ref-type="bibr" rid="b35">35</xref>), exhibited considerable reduction of both active and total Smad2/3 (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 6</xref>), effects that are completely different to that of either LY treatment or mTORC2 inhibition. Thus, the exact mechanisms by which mTORC2 regulates the phosphorylation of Smad2/3 linker residue await further elucidation.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Suppression of mTORC2 leads to more efficient DE formation</title>
+        <p>Consistent with the posited role for mTORC2 in regulating T220/T179 phosphorylation and inhibiting Smad2/3 activity, treatment of hESCs using a combination of AA and Torin yielded a substantial increase in the expression of endoderm genes (<xref ref-type="fig" rid="f7">Fig. 7a,b</xref>), recapitulating the effects of AA&#x2013;LY treatment, but with noticeably less cell death. Consequently, this led to both a more efficient DE differentiation and hepatocyte generation (<xref ref-type="fig" rid="f7">Fig. 7c,d</xref>). Thus, the greater yield of DE cells in combination with the reduction in cytotoxicity makes AA&#x2013;Torin a superior alternative to AA&#x2013;LY treatment and provides compelling evidence to suggest that the mTORC2-mediated regulation of Smad2/3 linker phosphorylation is a critical mechanism accounting for the inhibitory effect of PI3K on Activin-induced DE differentiation.</p>
+      </sec>
+    </sec>
+    <sec disp-level="1" sec-type="discussion">
+      <title>Discussion</title>
+      <p>In the present study, we have identified a novel and direct role for PI3K/mTORC2 signalling in regulating the phosphorylation status of the Smad2/3 linker T220/T179 residue. This phosphorylation permits the recruitment of the E3 ubiquitin ligase Nedd4L to Smad2/3 upon their activation, which subsequently promotes the ubiquitin-mediated proteasomal degradation of active Smad2/3. PI3K/mTORC2-mediated degradation of active Smad2/3 curtails the duration and intensity of the Activin-Smad2/3 signal, which ultimately leads to the attrition of Activin-induced DE differentiation in hESCs.</p>
+      <p>Our results are in line with previous findings, in that ubiquitin-mediated proteasomal degradation of active Smad2/3 plays an important role in the regulation of TGF-&#x3B2;/Smad2/3 activity<xref ref-type="bibr" rid="b22">22</xref><xref ref-type="bibr" rid="b23">23</xref> and that the phosphorylation of Smad2/3 linker T220/T179 is critical for the recruitment of the E3 ubiquitin ligase Nedd4L<xref ref-type="bibr" rid="b23">23</xref>. However, we have found that the T220/T179 residue can be readily phosphorylated by PI3K/mTORC2 signalling in the absence of Smad2/3 activation and is thus independent of AA-induced CDK or Erk activation. Furthermore, this phosphorylation can only recruit Nedd4L efficiently upon Smad2/3 activation, thereby offering a mechanism by which preferential selectivity for active Smad2/3 degradation is established. In addition, TGF-&#x3B2; ligands are able to activate PI3K signalling through non-canonical means concurrently with the canonical activation of Smad2/3 (ref. <xref ref-type="bibr" rid="b36">36</xref>), which may act as an internal regulative mechanism that prevents overactivation of Smad2/3. However, given that the majority of active Smad2/3 is still able to translocate into the nucleus despite the presence of T220/T179 phosphorylation (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 4e</xref>), this suggests that additional factors that interact with active Smad2/3 may hinder the recruitment of Nedd4L and prevent their degradation. Receptor-mediated activation of Smad2/3 has been well characterized for inducing conformational changes that enable the homo- and heterodimerization of R-Smads, as well as interaction with Smad4. However, whether or not such interactions between the Smad2/3 and other factors can act to impede the recruitment of Nedd4L awaits further investigation. In any case, despite only a small proportion of the activated R-Smads being targeted for degradation, this appears to be sufficient in impeding the proper formation of DE from hESCs. To definitively establish that Smad2/3 linker phosphorylation mediates the mTORC2-dependent inhibition of DE differentiation of hESCs, one would need to generate hESCs with knock-ins of linker phospho-deficient or phospho-mimetic mutants of Smad2/3.</p>
+      <p>As shown in our experiments, AA&#x2013;LY-induced enhancement of Smad2/3 activation in hESCs is only apparent at 3&#x2009;h post treatment, despite the effectiveness of LY in reducing T220/T179 phosphorylation by 1&#x2009;h of treatment. In explaining this discrepancy, it is probable that initially in the presence of abundant ligand (100&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup> AA) and persistent receptor activation<xref ref-type="bibr" rid="b37">37</xref>, the rate of Smad2/3 activation outpaces that of its Nedd4L-mediated degradation, which consequently obscures the effect of LY-induced downregulation of T220/T179 phosphorylation in prolonging Smad2/3 activation. However, as the ligand availability diminishes with increasing time, the proportion of the active Smad2/3 that is targeted for Nedd4L-mediated degradation becomes increasingly higher relative to the total active Smad2/3 pool, which ultimately promotes the rapid downregulation of Smad2/3 activity (<xref ref-type="fig" rid="f8">Fig. 8</xref>). In support of this, the LY-dependent effect on active Smad2/3 was shown to be evident at 1&#x2009;h post treatment when a lower dose of ligand (10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup> AA) is applied or when receptor activation is blocked by SB431542. Putting this in a biological context, during embryonic development where TGF-&#x3B2;/Nodal/Activin are at physiological levels, this PI3K/mTOR/Nedd4L-mediated degradation mechanism may act as an internal thermostat that regulates the amplitude of Smad2/3 induction and thereby allowing proper readout of the morphogenic gradient <italic>in vivo</italic>.</p>
+      <p>One important finding of this study is the identification of mTORC2 as a modulator of TGF-&#x3B2; signalling, specifically by regulating the phosphorylation of the Smad2/3 linker T220/T179 residue. In assessing the contribution of the previously identified linker kinases, Erk1/2 and CDK<xref ref-type="bibr" rid="b24">24</xref><xref ref-type="bibr" rid="b26">26</xref><xref ref-type="bibr" rid="b27">27</xref>, we showed that when inhibited, neither could replicate the effects of PI3K inhibition. Furthermore, under certain conditions, LY-mediated inhibition of PI3K did not reduce, but rather enhanced the activation of Erk1/2. As such, enhancement of DE differentiation via downregulation T220/T179 phosphorylation and enhancement of Smad2/3 activity does not appear to be solely through an Erk/Wnt/&#x3B2;-catenin-mediated mechanism as outlined in a recent study<xref ref-type="bibr" rid="b14">14</xref>, but is rather through a more distinct and direct mechanism. The PI3K pathway bifurcates at many points and constitutes a large family of serine/threonine kinases of which the best characterized are the Akt and mTOR branches. Our data have shown that Akt does not affect phosphorylation of Smad2/3-T220/T179, which is consistent with previous findings<xref ref-type="bibr" rid="b8">8</xref><xref ref-type="bibr" rid="b9">9</xref><xref ref-type="bibr" rid="b10">10</xref>. In manipulating mTORC2 activity using both inhibitor-based and genetic means, we have identified mTORC2 as a key player in the regulation of the linker T220/T179 phosphorylation opposed to mTORC1. Although it has been reported that inhibition of mTORC1 by rapamycin can enhance the DE specification of hESCs<xref ref-type="bibr" rid="b38">38</xref>, chronic exposure of hESCs to rapamycin over several days will also inhibit mTORC2 activity<xref ref-type="bibr" rid="b32">32</xref>, which may ultimately be the reason for the reported improvement in DE specification. Furthermore, since mTORC2 activation is mediated by PI3K<xref ref-type="bibr" rid="b39">39</xref>, it is not surprising that the inhibition of PI3K signalling could lead to a cessation of mTORC2 kinase activity. Although mTORC2 immunoprecipitates could not phosphorylate the T220/T179 residue in an <italic>in vitro</italic> kinase reaction, this cannot completely exclude the possibility of mTORC2 being the direct kinase responsible for this phosphorylation, as the substrate recognition mechanisms of mTORC2 are still poorly defined<xref ref-type="bibr" rid="b39">39</xref><xref ref-type="bibr" rid="b40">40</xref>. Alternatively, mTORC2 may indeed act via indirect means through activation of downstream kinases that in turn regulate Smad2/3 linker phosphorylation; however, such kinases remain to be identified.</p>
+      <p>As a whole and to the best of our knowledge, we have for the first time identified a role for mTORC2 in mediating TGF-&#x3B2;/Activin signalling activities, and established a plausible mechanism through which mTORC2 activity directly impacts the Activin-induced DE differentiation of hESCs. Identification of mTORC2 as a key component of this mechanism not only provides new avenues through which hESC differentiation protocols can be improved, but also warrants the initiation of further studies into the impact of this mechanism on other TGF-&#x3B2; activities, adding to the growing repertoire of novel mTORC2 functions.</p>
+    </sec>
+    <sec disp-level="1" sec-type="methods">
+      <title>Methods</title>
+      <sec disp-level="2">
+        <title>Cell culture and differentiation</title>
+        <p>H1 and H9 hESCs from WiCell were routinely cultured on Matrigel-coated plates in MEF conditioned medium (MEF-CM) supplemented with 10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup> of bFGF<xref ref-type="bibr" rid="b41">41</xref>. DE differentiation was carried out as summarized in <xref ref-type="fig" rid="f1">Fig. 1a</xref><xref ref-type="bibr" rid="b12">12</xref>. When hESCs were grown to 70&#x2013;80% confluency, MEF-CM was replaced with RPMI-1,640 supplemented with 1 &#xD7; B27 (RPMI/B27 medium) containing Activin (100&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>, PeproTech) and LY294002 (20&#x2009;&#x3BC;M day 1 and 10&#x2009;&#x3BC;M day 2 and 3, Sigma) or Torin-2 (15&#x2009;nM, Tocris) or wortmannin (300&#x2009;nM, Sigma) for 2&#x2013;3 days with daily medium change (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 1b</xref>). For hepatocyte differentiation, cells were further cultured in knockout-DMEM (KO-DMEM) containing 20% KO serum replacement, 1&#x2009;mM glutamine, 1% non-essential amino acids, 0.1&#x2009;mM &#x3B2;-mercaptoethanol (all from Life Technologies) with either DMSO (1%, Sigma) or BMP2 (20&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>, PeproTech) and bFGF (10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>, R&amp;D systems) for another 4 days, followed by 3&#x2013;5 days culture in L15 medium supplemented with 8.3% foetal bovine serum (FBS), 8.3% tryptose phosphate broth, 10&#x2009;&#x3BC;M hydrocortisone 21-hemisuccinate, 1&#x2009;&#x3BC;M insulin (all from Sigma), 50&#x2009;&#x3BC;g&#x2009;ml<sup>&#x2212;1</sup> ascorbic acid and 2&#x2009;mM glutamine containing 10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup> hepatocyte growth factor (PeproTech) and 20&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup> oncostatin M (R&amp;D systems). In the experiments using various inhibitors, hESCs were cultured in RPMI/B27 medium containing Activin (100&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>) for 20&#x2009;min following MEF-CM removal and 2 &#xD7; PBS wash (<xref ref-type="fig" rid="f3">Fig. 3a</xref>). The Activin-containing medium was then replaced with fresh RPMI/B27 containing the indicated inhibitors, and cells were harvested 1&#x2013;6&#x2009;h later as indicated. The following inhibitors were used: MG132 (10&#x2009;&#x3BC;M) and okadaic acid (5&#x2009;nM) from Merck/Millipore; SB431542 (10&#x2009;&#x3BC;M) from Sigma; U0126 (10&#x2009;&#x3BC;M) and SP600125 (500&#x2009;nM) from Reagents Direct; SB203580 (20&#x2009;&#x3BC;M) from R&amp;D systems, flavopiridol (1&#x2009;&#x3BC;M) and GDC-0941 (200&#x2009;nM), both from Selleck Bio.</p>
+        <p>PC3 cells were kindly provided by Dr Kypta of Imperial College London. Hep3B and HEK293T tumour cell lines were obtained from ATCC (HB8064 and CRL-3216, respectively). Rictor null and corresponding control MEF were a gift from Professor Magnuson, VUMC, Tennessee<xref ref-type="bibr" rid="b33">33</xref>. PC3 cells were cultured in RPMI-1,640 medium containing 10% FBS. Hep3B, HEK293T and transgenic MEF cells were cultured in DMEM containing 10% FBS. All reagents for tumour cell cultures are from Sigma. Treatment of PC3 cells were performed by starving the cells overnight in RPMI-1,640 medium and then treating them for 1&#x2009;h with Activin (10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>)&#xB1;LY (20&#x2009;&#x3BC;M) or indicated factors, including rapamycin (100&#x2009;nM), LongR<sup>3</sup> IGF-1 (I, 200&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>, both from Sigma), Heregulin (H, 10&#x2009;ng&#x2009;ml<sup>&#x2212;1</sup>, PeproTech) and SGK inhibitor, GSK650394 (100&#x2009;&#x3BC;M, Sigma).</p>
+        <p>All cell lines have been regularly checked for the absence of mycoplasma.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Plasmids</title>
+        <p>Expression vectors for WT Smad2 (pCS2-Flag-Smad2, #14042), active Akt (pcDNA3 Myr-HA-Akt1, #9008) Akt triple mutant (pcDNA3-T7-Akt-K179M/T308A/S473A, #9031) and Rictor (pRK-myc-Rictor #11367) were obtained from Professor J. Massague<xref ref-type="bibr" rid="b42">42</xref>, Professor W. Sellers<xref ref-type="bibr" rid="b43">43</xref> and Professor D. Sabatini<xref ref-type="bibr" rid="b44">44</xref> through Addgene. Smad2 mutant T220V was generated by site-directed mutagenesis of pCS2-Flag-Smad2 using the Q5 Site-Directed Mutagenesis Kit (NEB) following the manufacturer's protocol, with the following oligonucleotides: forward primer 5&#x2032;- GAGTAATTATATTCCAGAAGTGCCACCTCCTGGATATATC -3&#x2032; and reverse primer 5&#x2032;- TGTGGCTCAATTCCTGCTGG -3&#x2032;. The resulting sequences were validated by bidirectional sequencing. Partially active Akt (S473A) plasmid was generated by subcloning to replace the <italic>Blp</italic>I/<italic>EcoR</italic>I fragment of pcDNA3-Myr-HA-Akt1 containing S473 with A473 from pcDNA3-T7-Akt1-K179M/T308A/S473A. Lentivector containing shNedd4L was generated by cloning shNedd4L oligonucleotides into modified pLVTHM expressing puro-2A-GFP complementary DNA (cDNA)<xref ref-type="bibr" rid="b45">45</xref>. The sequence of shNedd4L was as previously published<xref ref-type="bibr" rid="b23">23</xref>: 5&#x2032;- GCTAGACTGTGGATTGAGTttcaagagaACTCAATCCACAGTCTAGCtttttggaaa -3&#x2032;. Lentivectors that contained two different shRNAs targeting Rictor within a pLKO.1 backbone were obtained from Addgene and used in combination to generate Rictor deficient lines. The sequences are as previously published<xref ref-type="bibr" rid="b46">46</xref>: 5&#x2032;- ccggtCAGCCTTGAACTGTTTAActcgagTTAAACAGTTCAAGGCTGtttttg -3&#x2032; and 5&#x2032;- ccggtACTTGTGAAGAATCGTATCTTctcgagAAGATACGATTCTTCACAAGTtttttg -3&#x2032;. Lentivectors containing non-targeting shGFP was used to generate control cells. GST-Flag-Smad2/Smad2-T220V plasmids were generated by inserting NcoI/XhoI fragment containing Flag-Smad2 or Flag-Smad2-T220V from their respective expression vectors into the pGEX-6p2 vector (GE Healthcare).</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Transfection and lentiviral transduction</title>
+        <p>Hep3B cells and transgenic MEFs were grown to 70&#x2013;90% confluency on the day of transfection. Akt or GFP expression plasmids were transfected using Lipofectamine LTX with PLUS reagent (Life Technologies) with modifications. In brief, for 1 &#xD7; 10<sup>6</sup> tumour cells, 1.6&#x2009;&#x3BC;g of kit-purified plasmid DNA was suspended in 50&#x2009;&#x3BC;l of OptiMEM supplemented with 1.6&#x2009;&#x3BC;l of PLUS reagent. In another tube, 4&#x2009;&#x3BC;l of Lipofectamine LTX reagent was resuspended in another 50&#x2009;&#x3BC;l of OptiMEM. Both tubes were incubated at room temperature for 5&#x2009;min before being mixed together and incubated for a further 25&#x2009;min. During this time, target cells were trypsinized, counted and pelleted before being directly resuspended in the transfection mix and incubated for 15&#x2009;min. The transfection process was stopped upon the addition of growth media and cells were allowed to plate down overnight in the appropriate culture vessel. Cells were typically split 1:2&#x2013;1:3 following transfection. Reagents were scaled up accordingly depending on the number of cells to be transfected. For hESCs and MEFs, lipofection was conducted following the accompanying manufacturer's instructions with a DNA to Lipofectamine LTX ratio of 1:3 and 1:10, respectively. Transfected Hep3B cells were starved overnight the following day and then treated with the appropriate reagents for 1&#x2009;h before being harvested for analysis. Transfected MEFs were allowed to recover and proliferate for 48&#x2009;h before being harvested for immunoblot.</p>
+        <p>Lentiviruses were produced by transient transfection of HEK293T cells with a lentivector containing the desired transgenic cDNA or shRNA, as well as pCMV&#x394;8.91 helper and pVSV-G envelope plasmids using standard protocols<xref ref-type="bibr" rid="b47">47</xref>. hESCs were split 1:3 the day of transduction by being dissociated with accutase (Sigma) into single cells and resuspended in MEF-CM supplemented with 10&#x2009;&#x3BC;M ROCKi (Y-27632 or ROCK inhibitor, Reagents Direct) to prevent apoptosis induced by the loss of cell&#x2013;cell contact<xref ref-type="bibr" rid="b48">48</xref>. The cells were incubated overnight with concentrated viral particles and consequently became infected as they were plating down. Forty-eight hours post infection, cells were selected with puromycin (2&#x2009;&#x3BC;g&#x2009;ml<sup>&#x2212;1</sup>) and upon stable passaging, assessed for transgene expression or knockdown via immunoblot and quantitative reverse transcription (qRT&#x2013;PCR), which was phenotypically assessed via DE differentiation.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Quantitative reverse transcription&#x2013;PCR (qRT&#x2013;PCR)</title>
+        <p>Total RNAs were isolated from cells with TRI reagent (Sigma) and cDNA samples were synthesized with Protoscript II Reverse Transcriptase (NEB). qRT&#x2013;PCR was performed in a DNA Engine Opticon (Bio-Rad) or Step One thermocycler (Applied BioSystems) using SYBR Green Jumpstart Taq Ready Mix (Sigma). Two housekeeping genes were used as normalizer. Two independent biological samples were used and multiple measurements were carried out for each treatment. Data were presented as mean&#xB1;s.d. for six measurements. A list of primers used in this study are provided in <xref ref-type="supplementary-material" rid="S1">Supplementary Table 1</xref>.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Cytoplasmic/nuclear fractionation</title>
+        <p>Cells were harvested in cytoplasmic buffer (10&#x2009;mM HEPES pH 7.9, 0.1&#x2009;mM EDTA, 0.1&#x2009;mM EGTA, 10&#x2009;mM KCl and 0.5&#x2009;mM dithiothreitol (DTT)) supplemented with phosphatase and protease inhibitors and allowed to swell on ice for 20&#x2009;min after which Nonidet-P40 was added to a final concentration of 0.5%. Samples were quickly vortexed and centrifuged to pellet the cell nuclei. The supernatant was extracted and retained as the cytoplasmic fraction. The nuclear pellet was washed three times with cytoplasmic buffer to remove residual cytoplasmic contamination and resuspended in nuclear buffer (20&#x2009;mM HEPES pH 7.9, 1&#x2009;mM EDTA, 1&#x2009;mM EGTA, 1&#x2009;mM DTT and 0.4&#x2009;M NaCl) before a final centrifugation at 15,000<italic>g</italic> to extract the nuclear fraction. Samples were quantified using bicinchoninic acid assay kit (Thermo Fisher Scientific) before being analysed by immunoblot.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Antibodies</title>
+        <p>The following are the primary antibodies used in this study; indicated dilutions refer to use in immunoblotting, unless otherwise stated: anti-Akt (#9727, 1:2,000), pAkt-S473 (#4060, 1:2,000), pAkt-T308 (#9275, 1:1,000), Erk1/2 (#9102, 1:1,000), pErk1/2-T202/Y204 (#9106, 1:1,000), mTOR (#2972, 1:1,000), pNedd4L-S448 (#8063, 1:1,000), P70S6K (#9202, 1:1,000), pP70S6K-T421/S424 (#9204, 1:1,000), pGSK3&#x3B1;/&#x3B2;-S21/9 (#9331, 1:1,000), pRb-S780 (#9307, 1:1,000), pSAPK/JNK-T183/Y185 (#4668, 1:1,000), Smad2 (#3122, 1:1,000), Smad2/3 (#3102, 1:1,000), pSmad2-S245/250/255 (#3104, 1:1,000), pSmad2-S465/467 (#3122, 1:1,000), Smad4 (#9515, 1:1,000) and Ubiquitin (#3936, 1:1,000) were from Cell Signalling/New England Biolabs; anti-Brachyury (AF2085, 1:500, IF:1:50), CXCR4-PE (FAB170P, 1:25) and Sox17 (MAB1924, 1:500, IF:1:100) were from R&amp;D systems; anti-CLIC4 (sc-130723, 1:500), Lamin B (sc-365962, 1:500) and PPM1A (sc-56956, 1:500) were from Santa Cruz; anti-AFP (A8452, 1:500), &#x3B2;-actin (A5316, 1:5,000), Flag (F1804, 1:1,000) and GST (G7781, 1:1,000) were from Sigma; anti-pSmad2/3-T220/179 (AP3675a, 1:500) and pSmad3-S423/425 (EP823Y, #04-1042, 1:1,000) were from Abgent and Millipore, respectively; anti-&#x3B2;-tubulin (ab6046, 1:1,000), FoxA2 (ab60721, 1:200) and Nedd4L (ab131167, 1:5,000) were from Abcam; anti-albumin (A0001, 1:500) was from DAKO and anti-Rictor (A300-459A, 1:5,000) was from Bethyl Labs.</p>
+        <p>Secondary antibodies for immunostaining used were as follows: Alexa Fluor goat anti-mouse IgG 488, 1:400, Alexa Fluor goat anti-mouse IgG 568, 1:400, Alexa Fluor goat anti-rabbit IgG 488, 1:400 and Alexa Fluor donkey anti-goat IgG 488, 1:400 were from Life Technologies. For immunoblotting: goat anti-rabbit IgG-HRP, 1:2,000, goat anti-mouse IgG-HRP, 1:5,000, donkey anti-goat IgG-HRP, 1:5,000 were from Santa Cruz and goat anti-rabbit or mouse IgG-HRP (light-chain specific), 1:10,000 were from Jackson ImmunoResearch Laboratories. Isotope controls: normal mouse IgG2a and normal rabbit IgG were from Santa Cruz.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Immunostaining of hESCs</title>
+        <p>hESCs were split and cultured on Matrigel-coated Thermanox coverslips (Thermo Fisher Scientific) until the desired confluency was reached. Cells were then washed with Dulbecco's PBS (DPBS) and fixed for 10&#x2013;20&#x2009;min with 4% fresh paraformaldehyde solution. Excess paraformaldehyde was removed by washing three times with DPBS and the coverslips were then incubated with blocking/permeabilization buffer for 1&#x2009;h followed by an overnight incubation with primary antibody at the appropriate dilution at 4&#x2009;&#xB0;C with tilting. The following day, coverslips were subjected to 10-min washes three times with DPBS, followed by a 40-min incubation with the appropriate fluorophore-conjugated secondary antibody in the dark. Coverslips were then subjected to two further 10 min washes with DPBS followed by a 10-min DPBS/4&#x2032;,6 diamidino-2-phenylindole (DAPI) wash, with DAPI at a final concentration of 1&#x2009;&#x3BC;g&#x2009;ml<sup>&#x2212;1</sup> to counterstain the nuclei. All washes were carried out in dark. Slides were mounted onto microscope slides using Mowiol 4&#x2013;88 solution and allowed to dry overnight. Slides were visualized using a Leica SP5 II confocal fluorescent microscope typically at &#xD7; 64 magnification.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Immunoblotting</title>
+        <p>Cells were harvested using RIPA (radio immunoprecipitation assay) buffer (50&#x2009;mM Tris-HCl, pH 8.0, 150&#x2009;mM NaCl, 1% Nonidet-P40, 0.5% sodium deoxycholate and 0.5% SDS) supplemented with phosphatase (Na<sub>3</sub>VO<sub>4</sub>, 1:100, NaF, 1:200 or phosphatase inhibitor cocktail 2, Sigma, 10&#x2009;&#x3BC;l&#x2009;ml<sup>&#x2212;1</sup>) and protease inhibitors (phenylmethylsulphonyl fluoride in ethanol or protease inhibitor cocktail, Sigma). Proteins were purified by centrifugation at 15,000<italic>g</italic> at 4&#x2009;&#xB0;C for 20&#x2009;min and then quantified using bicinchoninic acid assay kit (Thermo Fisher Scientific) and resolved on 7.5% Bis-Tris polyacrylamide gels, before being transferred onto polyvinylidene fluoride membranes via electroblotting. Blots were probed with primary antibody overnight followed by horseradish peroxidise (HRP)-conjugated secondary antibodies before being developed via enhanced chemiluminescent substrate and exposure onto CL-XPosure film (Thermo Fisher Scientific). Molecular weight markers (Thermo Fisher Scientific 11832124 or New England BioLab #7712) were run alongside all samples and values are as indicated in both the main and uncropped scans (<xref ref-type="supplementary-material" rid="S1">Supplementary Fig. 7</xref>).</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Co-immunoprecipitation of Nedd4L with Smad2</title>
+        <p>Cells were harvested in HEPES lysis buffer (40&#x2009;mM HEPES pH 7.4, 10&#x2009;mM EDTA and 10% glycerol) supplemented with phosphatase and protease inhibitors as per immunoblotting. Cell lysis was induced mechanically by repeatedly passing lysate through a 23-G needle on ice. Protein within lysates were purified by centrifugation at 13,000<italic>g</italic> at 4&#x2009;&#xB0;C for 10&#x2009;min and quantified, with 1&#x2009;mg used in the subsequent immunoprecipitation with Smad2 antibody for 90&#x2009;min at 4&#x2009;&#xB0;C with rotation. Immunocomplexes were isolated with the lysates using Protein-G conjugated Dynabeads (Life Technologies) through a further 1&#x2009;h incubation under the same conditions. Beads were then washed 3 times with cold HEPES lysis buffer to remove nonspecific binding prior to protein elution with 2 &#xD7; Laemmli buffer. Elutes were subjected to immunoblotting and the co-immunoprecipitation assessed using relevant primary antibodies.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Smad2 ubiquitination assay</title>
+        <p>Cells were harvested in non-denaturing lysis buffer (20&#x2009;mM Tris-HCl, pH 7.5, 150&#x2009;mM NaCl, 1&#x2009;mM EDTA, pH 8.0, 1&#x2009;mM EGTA, pH 8.0 and 0.5% Nonidet-P40) supplemented with phosphatase and protease inhibitors as per immunoblotting. Lysates were additionally supplemented with 2&#x2009;&#x3BC;M ubiquitin aldehyde (Boston Biochem) to prevent the action of deubiquitinating enzymes. Protein within lysates were purified and quantified, with 1&#x2009;mg used in the subsequent immunoprecipitation with Smad2 antibody for 90&#x2009;min at 4&#x2009;&#xB0;C with rotation. Immunocomplexes were isolated from the lysates using Protein-G conjugated Dynabeads through a further 1&#x2009;h incubation under the same conditions. Beads were then washed 3 times with cold non-denaturing lysis buffer to remove nonspecific binding prior to protein elution with 2 &#xD7; Laemmli buffer. Elutes were subjected to immunoblotting and the degree of ubiquitination was assessed using an anti-ubiquitin antibody.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Generation of recombinant GST-Flag-Smad2/Smad2-T220V</title>
+        <p>pGEX-6p2 vectors containing Flag-Smad2/Smad2-T220V cDNAs were transformed into BL-21 <italic>E. coli</italic> strain. Upon ampicillin selection, single colonies were used to inoculate overnight cultures, which were then subsequently used to inoculate new cultures the following day. Expression of GST-Flag-Smad2/Smad2-T220V was induced in these cultures using 0.1&#x2009;M isopropyl &#x3B2;-D-1-thiogalactopyranoside (Sigma) once they reached mid-log phase growth (OD<sub>550&#x2013;600</sub>&#x223C;0.6&#x2013;1.0). Proteins were harvested via centrifugation and sonication, followed by immunoprecipitation with glutathione-conjugated magnetic beads (Thermo Fisher Scientific). Recombinant proteins were eluted from the beads in 50&#x2009;mM Tris-HCl containing 10&#x2009;mM reduced glutathione. Proteins were then taken for immunoblotting with the relevant antibodies to check for successful expression and then used as substrate for subsequent kinase assays.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Akt/Erk2 kinase assay</title>
+        <p>HEK293T or PC3 cells were harvested using non-denaturing lysis buffer (as per the Smad2 ubiquitination assay) to retain kinase activity and supplemented with phosphatase and protease inhibitors as per immunoblotting. Active Akt was immunoprecipitated using anti-pAkt (S473) antibody and was tested for kinase activity via incubation with recombinant GST-GSK3&#x3B1;/&#x3B2; fusion protein (NEB) as a substrate in kinase assay buffer (25&#x2009;mM Tris-HCl, pH 7.5, 5&#x2009;mM &#x3B2;-glycerophosphate, 2&#x2009;mM DTT, 10&#x2009;mM MgCl<sub>2</sub> and 200&#x2009;mM ATP) for 40&#x2009;min at 30&#x2009;&#xB0;C. Kinase assay was repeated using GST-Flag-Smad2/Smad2-T220V as substrate and phosphorylation of the linker region was analysed via immunoblotting with the appropriate primary antibody. As a positive control, GST-Flag-Smad2/Smad2-T220V proteins were incubated with Erk2 kinase (NEB) in the supplied buffer supplemented with 200&#x2009;mM ATP and assessed for phosphorylation via immunoblotting.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>mTORC2 kinase assay</title>
+        <p>The assay was carried out using previously described methods<xref ref-type="bibr" rid="b46">46</xref> with the following modifications. HEK293T or PC3 cells were harvested in mTORC lysis buffer (40&#x2009;mM HEPES pH 7.5, 120&#x2009;mM NaCl, 1&#x2009;mM EDTA, 10&#x2009;mM Na<sub>4</sub>P<sub>2</sub>O<sub>7</sub>, 50&#x2009;mM NaF and 0.5% Nonidet-P40) supplemented with phosphatase and protease inhibitors as per immunoblotting. Cells were gently lysed with rotation for 20&#x2009;min at 4&#x2009;&#xB0;C after which 1&#x2009;mg of total protein was used in the subsequent immunoprecipitation with Rictor antibody to selectively isolate mTORC2 over mTORC1. Immunoprecipitated complexes were washed 3 times with mTORC lysis buffer followed by washing with mTOR kinase assay buffer (25&#x2009;mM HEPES, 100&#x2009;mM potassium acetate, 1&#x2009;mM MgCl<sub>2</sub> and 500&#x2009;mM ATP) twice to remove residual detergent. mTORC2 complexes were incubated with &#x3BB;-phosphatase-treated His6-tagged-Akt1 (Millipore) protein or GST-Flag-Smad2/Smad2-T220V recombinant proteins in mTORC kinase assay buffer for 40&#x2009;min at 37&#x2009;&#xB0;C. Reactions were stopped upon the addition of 2 &#xD7; Laemmli buffer, and the phosphorylation on Akt-S473 or SmadT220 residues was assessed by immunoblotting with the appropriate primary antibodies.</p>
+      </sec>
+      <sec disp-level="2">
+        <title>Luciferase assay</title>
+        <p>hESCs were split 1:6 into 12-well plates using the accutase/ROCKi method as above and allowed to reach 70&#x2013;80% confluence prior to transfection. Both firefly pGL3-CAGA<sup>12</sup>-luc and renilla pRL-T7-renilla (Promega) plasmids were transfected at a ratio of 10:1 using Lipofectamine 2000 following the manufacturer's protocol. Forty-two hours post transfection, hESCs were differentiated for 6&#x2009;h, harvested using accutase and dispensed into a 96-well luminometer plate. Luciferase assay was performed using the Dual-Glo luciferase assay kit (Promega) following the accompanying protocol. Both firefly and renilla luminescence was recorded using a Victor II luminometer (Perkin Elmer). Firefly luminescence readings were normalized with corresponding renilla luminescence readings to give representative luciferase expression values that are independent of transfection efficiency and cell number. Data presented are mean&#xB1;s.d. from three independent transfection experiments.</p>
+      </sec>
+    </sec>
+    <sec disp-level="1">
+      <title>Additional information</title>
+      <p><bold>How to cite this article:</bold> Yu, J. S. L. <italic>et al</italic>. PI3K/mTORC2 regulates TGF-&#x3B2;/Activin signalling by modulating Smad2/3 activity via linker phosphorylation. <italic>Nat. Commun.</italic> 6:7212 doi: 10.1038/ncomms8212 (2015).</p>
+    </sec>
+    <sec sec-type="supplementary-material" id="S1">
+      <title>Supplementary Material</title>
+      <supplementary-material id="d33e18" content-type="local-data">
+        <caption>
+          <title>Supplementary Information</title>
+          <p>Supplementary Figures 1-7 and Supplementary Table 1.</p>
+        </caption>
+        <media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-s1.pdf"/>
+      </supplementary-material>
+    </sec>
+  </body>
+  <back>
+    <ack>
+      <p>We thank Professor M.A. Magnuson, VUMC, Tennessee, for kindly providing rictor null MEFs. We also thank our colleagues here at Imperial College London: Professor V. Episkopou for the pGL3-CAGA<sub>12</sub>-luc construct; Professor E. Lam for the p70S6K antibodies, Dr R. Kypta for PC3 cells; Professors V. Episkopou, M. Parker and Dr R. Kypta for their helpful discussions. The work was supported by UK MRC and Genesis Research Trust. T.S.R. was supported by a studentship from University of Malaya/Ministry of Higher Education, Malaysia.</p>
+    </ack>
+    <ref-list>
+      <ref id="b1">
+        <mixed-citation publication-type="journal"><name><surname>Massague</surname><given-names>J.</given-names></name> &amp; <name><surname>Wotton</surname><given-names>D.</given-names></name>
+<article-title>Transcriptional control by the TGF-beta/Smad signaling system</article-title>. <source>EMBO J.</source>
+<volume>19</volume>, <fpage>1745</fpage>&#x2013;<lpage>1754</lpage> (<year>2000</year>).<pub-id pub-id-type="pmid">10775259</pub-id></mixed-citation>
+      </ref>
+      <ref id="b2">
+        <mixed-citation publication-type="journal"><name><surname>Schmierer</surname><given-names>B.</given-names></name> &amp; <name><surname>Hill</surname><given-names>C. S.</given-names></name>
+<article-title>TGFbeta-SMAD signal transduction: molecular specificity and functional flexibility</article-title>. <source>Nat. Rev. Mol. Cell Biol.</source>
+<volume>8</volume>, <fpage>970</fpage>&#x2013;<lpage>982</lpage> (<year>2007</year>).<pub-id pub-id-type="pmid">18000526</pub-id></mixed-citation>
+      </ref>
+      <ref id="b3">
+        <mixed-citation publication-type="journal"><name><surname>Guo</surname><given-names>X.</given-names></name> &amp; <name><surname>Wang</surname><given-names>X. F.</given-names></name>
+<article-title>Signaling cross-talk between TGF-beta/BMP and other pathways</article-title>. <source>Cell Res.</source>
+<volume>19</volume>, <fpage>71</fpage>&#x2013;<lpage>88</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19002158</pub-id></mixed-citation>
+      </ref>
+      <ref id="b4">
+        <mixed-citation publication-type="journal"><name><surname>Feng</surname><given-names>X. H.</given-names></name> &amp; <name><surname>Derynck</surname><given-names>R.</given-names></name>
+<article-title>Specificity and versatility in tgf-beta signaling through Smads</article-title>. <source>Annu. Rev. Cell Dev. Biol.</source>
+<volume>21</volume>, <fpage>659</fpage>&#x2013;<lpage>693</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">16212511</pub-id></mixed-citation>
+      </ref>
+      <ref id="b5">
+        <mixed-citation publication-type="journal"><name><surname>Massague</surname><given-names>J.</given-names></name>
+<article-title>TGFbeta signalling in context</article-title>. <source>Nat. Rev. Mol. Cell Biol.</source>
+<volume>13</volume>, <fpage>616</fpage>&#x2013;<lpage>630</lpage> (<year>2012</year>).<pub-id pub-id-type="pmid">22992590</pub-id></mixed-citation>
+      </ref>
+      <ref id="b6">
+        <mixed-citation publication-type="journal"><name><surname>Ross</surname><given-names>S.</given-names></name> &amp; <name><surname>Hill</surname><given-names>C. S.</given-names></name>
+<article-title>How the Smads regulate transcription</article-title>. <source>Int. J. Biochem. Cell Biol.</source>
+<volume>40</volume>, <fpage>383</fpage>&#x2013;<lpage>408</lpage> (<year>2008</year>).<pub-id pub-id-type="pmid">18061509</pub-id></mixed-citation>
+      </ref>
+      <ref id="b7">
+        <mixed-citation publication-type="journal"><name><surname>Chen</surname><given-names>R. H.</given-names></name>, <name><surname>Su</surname><given-names>Y. H.</given-names></name>, <name><surname>Chuang</surname><given-names>R. L.</given-names></name> &amp; <name><surname>Chang</surname><given-names>T. Y.</given-names></name>
+<article-title>Suppression of transforming growth factor-beta-induced apoptosis through a phosphatidylinositol 3-kinase/Akt-dependent pathway</article-title>. <source>Oncogene</source>
+<volume>17</volume>, <fpage>1959</fpage>&#x2013;<lpage>1968</lpage> (<year>1998</year>).<pub-id pub-id-type="pmid">9788439</pub-id></mixed-citation>
+      </ref>
+      <ref id="b8">
+        <mixed-citation publication-type="journal"><name><surname>Conery</surname><given-names>A. R.</given-names></name>
+<etal/>. <article-title>Akt interacts directly with Smad3 to regulate the sensitivity to TGF-beta induced apoptosis</article-title>. <source>Nat. Cell Biol.</source>
+<volume>6</volume>, <fpage>366</fpage>&#x2013;<lpage>372</lpage> (<year>2004</year>).<pub-id pub-id-type="pmid">15104092</pub-id></mixed-citation>
+      </ref>
+      <ref id="b9">
+        <mixed-citation publication-type="journal"><name><surname>Remy</surname><given-names>I.</given-names></name>, <name><surname>Montmarquette</surname><given-names>A.</given-names></name> &amp; <name><surname>Michnick</surname><given-names>S. W.</given-names></name>
+<article-title>PKB/Akt modulates TGF-beta signalling through a direct interaction with Smad3</article-title>. <source>Nat. Cell Biol.</source>
+<volume>6</volume>, <fpage>358</fpage>&#x2013;<lpage>365</lpage> (<year>2004</year>).<pub-id pub-id-type="pmid">15048128</pub-id></mixed-citation>
+      </ref>
+      <ref id="b10">
+        <mixed-citation publication-type="journal"><name><surname>Song</surname><given-names>K.</given-names></name>, <name><surname>Wang</surname><given-names>H.</given-names></name>, <name><surname>Krebs</surname><given-names>T. L.</given-names></name> &amp; <name><surname>Danielpour</surname><given-names>D.</given-names></name>
+<article-title>Novel roles of Akt and mTOR in suppressing TGF-beta/ALK5-mediated Smad3 activation</article-title>. <source>EMBO J.</source>
+<volume>25</volume>, <fpage>58</fpage>&#x2013;<lpage>69</lpage> (<year>2006</year>).<pub-id pub-id-type="pmid">16362038</pub-id></mixed-citation>
+      </ref>
+      <ref id="b11">
+        <mixed-citation publication-type="journal"><name><surname>D'Amour</surname><given-names>K. A.</given-names></name>
+<etal/>. <article-title>Efficient differentiation of human embryonic stem cells to definitive endoderm</article-title>. <source>Nat. Biotechnol.</source>
+<volume>23</volume>, <fpage>1534</fpage>&#x2013;<lpage>1541</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">16258519</pub-id></mixed-citation>
+      </ref>
+      <ref id="b12">
+        <mixed-citation publication-type="journal"><name><surname>Hay</surname><given-names>D. C.</given-names></name>
+<etal/>. <article-title>Efficient differentiation of hepatocytes from human embryonic stem cells exhibiting markers recapitulating liver development in vivo</article-title>. <source>Stem Cells</source>
+<volume>26</volume>, <fpage>894</fpage>&#x2013;<lpage>902</lpage> (<year>2008</year>).<pub-id pub-id-type="pmid">18238852</pub-id></mixed-citation>
+      </ref>
+      <ref id="b13">
+        <mixed-citation publication-type="journal"><name><surname>McLean</surname><given-names>A. B.</given-names></name>
+<etal/>. <article-title>Activin a efficiently specifies definitive endoderm from human embryonic stem cells only when phosphatidylinositol 3-kinase signaling is suppressed</article-title>. <source>Stem Cells</source>
+<volume>25</volume>, <fpage>29</fpage>&#x2013;<lpage>38</lpage> (<year>2007</year>).<pub-id pub-id-type="pmid">17204604</pub-id></mixed-citation>
+      </ref>
+      <ref id="b14">
+        <mixed-citation publication-type="journal"><name><surname>Singh</surname><given-names>A. M.</given-names></name>
+<etal/>. <article-title>Signaling network crosstalk in human pluripotent cells: a Smad2/3-regulated switch that controls the balance between self-renewal and differentiation</article-title>. <source>Cell Stem Cell</source>
+<volume>10</volume>, <fpage>312</fpage>&#x2013;<lpage>326</lpage> (<year>2012</year>).<pub-id pub-id-type="pmid">22385658</pub-id></mixed-citation>
+      </ref>
+      <ref id="b15">
+        <mixed-citation publication-type="journal"><name><surname>Chen</surname><given-names>Y. G.</given-names></name>, <name><surname>Li</surname><given-names>Z.</given-names></name> &amp; <name><surname>Wang</surname><given-names>X. F.</given-names></name>
+<article-title>Where PI3K/Akt meets Smads: the crosstalk determines human embryonic stem cell fate</article-title>. <source>Cell Stem Cell</source>
+<volume>10</volume>, <fpage>231</fpage>&#x2013;<lpage>232</lpage> (<year>2012</year>).<pub-id pub-id-type="pmid">22385648</pub-id></mixed-citation>
+      </ref>
+      <ref id="b16">
+        <mixed-citation publication-type="journal"><name><surname>Kubo</surname><given-names>A.</given-names></name>
+<etal/>. <article-title>Development of definitive endoderm from embryonic stem cells in culture</article-title>. <source>Development</source>
+<volume>131</volume>, <fpage>1651</fpage>&#x2013;<lpage>1662</lpage> (<year>2004</year>).<pub-id pub-id-type="pmid">14998924</pub-id></mixed-citation>
+      </ref>
+      <ref id="b17">
+        <mixed-citation publication-type="journal"><name><surname>Teo</surname><given-names>A. K.</given-names></name>
+<etal/>. <article-title>Pluripotency factors regulate definitive endoderm specification through eomesodermin</article-title>. <source>Genes Dev.</source>
+<volume>25</volume>, <fpage>238</fpage>&#x2013;<lpage>250</lpage> (<year>2011</year>).<pub-id pub-id-type="pmid">21245162</pub-id></mixed-citation>
+      </ref>
+      <ref id="b18">
+        <mixed-citation publication-type="journal"><name><surname>Brown</surname><given-names>S.</given-names></name>
+<etal/>. <article-title>Activin/Nodal signaling controls divergent transcriptional networks in human embryonic stem cells and in endoderm progenitors</article-title>. <source>Stem Cells</source>
+<volume>29</volume>, <fpage>1176</fpage>&#x2013;<lpage>1185</lpage> (<year>2011</year>).<pub-id pub-id-type="pmid">21630377</pub-id></mixed-citation>
+      </ref>
+      <ref id="b19">
+        <mixed-citation publication-type="journal"><name><surname>Lin</surname><given-names>X.</given-names></name>
+<etal/>. <article-title>PPM1A functions as a Smad phosphatase to terminate TGFbeta signaling</article-title>. <source>Cell</source>
+<volume>125</volume>, <fpage>915</fpage>&#x2013;<lpage>928</lpage> (<year>2006</year>).<pub-id pub-id-type="pmid">16751101</pub-id></mixed-citation>
+      </ref>
+      <ref id="b20">
+        <mixed-citation publication-type="journal"><name><surname>Shukla</surname><given-names>A.</given-names></name>
+<etal/>. <article-title>TGF-beta signalling is regulated by Schnurri-2-dependent nuclear translocation of CLIC4 and consequent stabilization of phospho-Smad2 and 3</article-title>. <source>Nat. Cell Biol.</source>
+<volume>11</volume>, <fpage>777</fpage>&#x2013;<lpage>784</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19448624</pub-id></mixed-citation>
+      </ref>
+      <ref id="b21">
+        <mixed-citation publication-type="journal"><name><surname>Bruce</surname><given-names>D. L.</given-names></name>, <name><surname>Macartney</surname><given-names>T.</given-names></name>, <name><surname>Yong</surname><given-names>W.</given-names></name>, <name><surname>Shou</surname><given-names>W.</given-names></name> &amp; <name><surname>Sapkota</surname><given-names>G. P.</given-names></name>
+<article-title>Protein phosphatase 5 modulates SMAD3 function in the transforming growth factor-beta pathway</article-title>. <source>Cell Signal.</source>
+<volume>24</volume>, <fpage>1999</fpage>&#x2013;<lpage>2006</lpage> (<year>2012</year>).<pub-id pub-id-type="pmid">22781750</pub-id></mixed-citation>
+      </ref>
+      <ref id="b22">
+        <mixed-citation publication-type="journal"><name><surname>Lo</surname><given-names>R. S.</given-names></name> &amp; <name><surname>Massague</surname><given-names>J.</given-names></name>
+<article-title>Ubiquitin-dependent degradation of TGF-beta-activated smad2</article-title>. <source>Nat. Cell Biol.</source>
+<volume>1</volume>, <fpage>472</fpage>&#x2013;<lpage>478</lpage> (<year>1999</year>).<pub-id pub-id-type="pmid">10587642</pub-id></mixed-citation>
+      </ref>
+      <ref id="b23">
+        <mixed-citation publication-type="journal"><name><surname>Gao</surname><given-names>S.</given-names></name>
+<etal/>. <article-title>Ubiquitin ligase Nedd4L targets activated Smad2/3 to limit TGF-beta signaling</article-title>. <source>Mol. Cell</source>
+<volume>36</volume>, <fpage>457</fpage>&#x2013;<lpage>468</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19917253</pub-id></mixed-citation>
+      </ref>
+      <ref id="b24">
+        <mixed-citation publication-type="journal"><name><surname>Alarcon</surname><given-names>C.</given-names></name>
+<etal/>. <article-title>Nuclear CDKs drive Smad transcriptional activation and turnover in BMP and TGF-beta pathways</article-title>. <source>Cell</source>
+<volume>139</volume>, <fpage>757</fpage>&#x2013;<lpage>769</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19914168</pub-id></mixed-citation>
+      </ref>
+      <ref id="b25">
+        <mixed-citation publication-type="journal"><name><surname>Kamaraju</surname><given-names>A. K.</given-names></name> &amp; <name><surname>Roberts</surname><given-names>A. B.</given-names></name>
+<article-title>Role of Rho/ROCK and p38 MAP kinase pathways in transforming growth factor-beta-mediated Smad-dependent growth inhibition of human breast carcinoma cells in vivo</article-title>. <source>J. Biol. Chem.</source>
+<volume>280</volume>, <fpage>1024</fpage>&#x2013;<lpage>1036</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">15520018</pub-id></mixed-citation>
+      </ref>
+      <ref id="b26">
+        <mixed-citation publication-type="journal"><name><surname>Kretzschmar</surname><given-names>M.</given-names></name>, <name><surname>Doody</surname><given-names>J.</given-names></name>, <name><surname>Timokhina</surname><given-names>I.</given-names></name> &amp; <name><surname>Massague</surname><given-names>J.</given-names></name>
+<article-title>A mechanism of repression of TGFbeta/ Smad signaling by oncogenic Ras</article-title>. <source>Genes Dev.</source>
+<volume>13</volume>, <fpage>804</fpage>&#x2013;<lpage>816</lpage> (<year>1999</year>).<pub-id pub-id-type="pmid">10197981</pub-id></mixed-citation>
+      </ref>
+      <ref id="b27">
+        <mixed-citation publication-type="journal"><name><surname>Matsuura</surname><given-names>I.</given-names></name>
+<etal/>. <article-title>Cyclin-dependent kinases regulate the antiproliferative function of Smads</article-title>. <source>Nature</source>
+<volume>430</volume>, <fpage>226</fpage>&#x2013;<lpage>231</lpage> (<year>2004</year>).<pub-id pub-id-type="pmid">15241418</pub-id></mixed-citation>
+      </ref>
+      <ref id="b28">
+        <mixed-citation publication-type="journal"><name><surname>Yamagata</surname><given-names>H.</given-names></name>
+<etal/>. <article-title>Acceleration of Smad2 and Smad3 phosphorylation via c-Jun NH(2)-terminal kinase during human colorectal carcinogenesis</article-title>. <source>Cancer Res.</source>
+<volume>65</volume>, <fpage>157</fpage>&#x2013;<lpage>165</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">15665291</pub-id></mixed-citation>
+      </ref>
+      <ref id="b29">
+        <mixed-citation publication-type="journal"><name><surname>Grimm</surname><given-names>O. H.</given-names></name> &amp; <name><surname>Gurdon</surname><given-names>J. B.</given-names></name>
+<article-title>Nuclear exclusion of Smad2 is a mechanism leading to loss of competence</article-title>. <source>Nat. Cell Biol.</source>
+<volume>4</volume>, <fpage>519</fpage>&#x2013;<lpage>522</lpage> (<year>2002</year>).<pub-id pub-id-type="pmid">12068307</pub-id></mixed-citation>
+      </ref>
+      <ref id="b30">
+        <mixed-citation publication-type="journal"><name><surname>Wrighton</surname><given-names>K. H.</given-names></name>, <name><surname>Lin</surname><given-names>X.</given-names></name> &amp; <name><surname>Feng</surname><given-names>X. H.</given-names></name>
+<article-title>Phospho-control of TGF-beta superfamily signaling</article-title>. <source>Cell Res.</source>
+<volume>19</volume>, <fpage>8</fpage>&#x2013;<lpage>20</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19114991</pub-id></mixed-citation>
+      </ref>
+      <ref id="b31">
+        <mixed-citation publication-type="journal"><name><surname>Lamming</surname><given-names>D. W.</given-names></name> &amp; <name><surname>Sabatini</surname><given-names>D. M.</given-names></name>
+<article-title>A central role for mTOR in lipid homeostasis</article-title>. <source>Cell Metab.</source>
+<volume>18</volume>, <fpage>465</fpage>&#x2013;<lpage>469</lpage> (<year>2013</year>).<pub-id pub-id-type="pmid">23973332</pub-id></mixed-citation>
+      </ref>
+      <ref id="b32">
+        <mixed-citation publication-type="journal"><name><surname>Sarbassov</surname><given-names>D. D.</given-names></name>
+<etal/>. <article-title>Prolonged rapamycin treatment inhibits mTORC2 assembly and Akt/PKB</article-title>. <source>Mol. Cell</source>
+<volume>22</volume>, <fpage>159</fpage>&#x2013;<lpage>168</lpage> (<year>2006</year>).<pub-id pub-id-type="pmid">16603397</pub-id></mixed-citation>
+      </ref>
+      <ref id="b33">
+        <mixed-citation publication-type="journal"><name><surname>Shiota</surname><given-names>C.</given-names></name>, <name><surname>Woo</surname><given-names>J. T.</given-names></name>, <name><surname>Lindner</surname><given-names>J.</given-names></name>, <name><surname>Shelton</surname><given-names>K. D.</given-names></name> &amp; <name><surname>Magnuson</surname><given-names>M. A.</given-names></name>
+<article-title>Multiallelic disruption of the rictor gene in mice reveals that mTOR complex 2 is essential for fetal growth and viability</article-title>. <source>Dev. Cell</source>
+<volume>11</volume>, <fpage>583</fpage>&#x2013;<lpage>589</lpage> (<year>2006</year>).<pub-id pub-id-type="pmid">16962829</pub-id></mixed-citation>
+      </ref>
+      <ref id="b34">
+        <mixed-citation publication-type="journal"><name><surname>Garcia-Martinez</surname><given-names>J. M.</given-names></name> &amp; <name><surname>Alessi</surname><given-names>D. R.</given-names></name>
+<article-title>mTOR complex 2 (mTORC2) controls hydrophobic motif phosphorylation and activation of serum- and glucocorticoid-induced protein kinase 1 (SGK1)</article-title>. <source>Biochem. J.</source>
+<volume>416</volume>, <fpage>375</fpage>&#x2013;<lpage>385</lpage> (<year>2008</year>).<pub-id pub-id-type="pmid">18925875</pub-id></mixed-citation>
+      </ref>
+      <ref id="b35">
+        <mixed-citation publication-type="journal"><name><surname>Heikamp</surname><given-names>E. B.</given-names></name>
+<etal/>. <article-title>The AGC kinase SGK1 regulates TH1 and TH2 differentiation downstream of the mTORC2 complex</article-title>. <source>Nat. Immunol.</source>
+<volume>15</volume>, <fpage>457</fpage>&#x2013;<lpage>464</lpage> (<year>2014</year>).<pub-id pub-id-type="pmid">24705297</pub-id></mixed-citation>
+      </ref>
+      <ref id="b36">
+        <mixed-citation publication-type="journal"><name><surname>Derynck</surname><given-names>R.</given-names></name> &amp; <name><surname>Zhang</surname><given-names>Y. E.</given-names></name>
+<article-title>Smad-dependent and Smad-independent pathways in TGF-beta family signalling</article-title>. <source>Nature</source>
+<volume>425</volume>, <fpage>577</fpage>&#x2013;<lpage>584</lpage> (<year>2003</year>).<pub-id pub-id-type="pmid">14534577</pub-id></mixed-citation>
+      </ref>
+      <ref id="b37">
+        <mixed-citation publication-type="journal"><name><surname>Inman</surname><given-names>G. J.</given-names></name>, <name><surname>Nicolas</surname><given-names>F. J.</given-names></name> &amp; <name><surname>Hill</surname><given-names>C. S.</given-names></name>
+<article-title>Nucleocytoplasmic shuttling of Smads 2, 3, and 4 permits sensing of TGF-beta receptor activity</article-title>. <source>Mol. Cell</source>
+<volume>10</volume>, <fpage>283</fpage>&#x2013;<lpage>294</lpage> (<year>2002</year>).<pub-id pub-id-type="pmid">12191474</pub-id></mixed-citation>
+      </ref>
+      <ref id="b38">
+        <mixed-citation publication-type="journal"><name><surname>Zhou</surname><given-names>J.</given-names></name>
+<etal/>. <article-title>mTOR supports long-term self-renewal and suppresses mesoderm and endoderm activities of human embryonic stem cells</article-title>. <source>Proc. Natl Acad. Sci. USA</source>
+<volume>106</volume>, <fpage>7840</fpage>&#x2013;<lpage>7845</lpage> (<year>2009</year>).<pub-id pub-id-type="pmid">19416884</pub-id></mixed-citation>
+      </ref>
+      <ref id="b39">
+        <mixed-citation publication-type="journal"><name><surname>Zinzalla</surname><given-names>V.</given-names></name>, <name><surname>Stracka</surname><given-names>D.</given-names></name>, <name><surname>Oppliger</surname><given-names>W.</given-names></name> &amp; <name><surname>Hall</surname><given-names>M. N.</given-names></name>
+<article-title>Activation of mTORC2 by association with the ribosome</article-title>. <source>Cell</source>
+<volume>144</volume>, <fpage>757</fpage>&#x2013;<lpage>768</lpage> (<year>2011</year>).<pub-id pub-id-type="pmid">21376236</pub-id></mixed-citation>
+      </ref>
+      <ref id="b40">
+        <mixed-citation publication-type="journal"><name><surname>Oh</surname><given-names>W. J.</given-names></name>
+<etal/>. <article-title>mTORC2 can associate with ribosomes to promote cotranslational phosphorylation and stability of nascent Akt polypeptide</article-title>. <source>EMBO J.</source>
+<volume>29</volume>, <fpage>3939</fpage>&#x2013;<lpage>3951</lpage> (<year>2010</year>).<pub-id pub-id-type="pmid">21045808</pub-id></mixed-citation>
+      </ref>
+      <ref id="b41">
+        <mixed-citation publication-type="journal"><name><surname>Gerrard</surname><given-names>L.</given-names></name>, <name><surname>Zhao</surname><given-names>D.</given-names></name>, <name><surname>Clark</surname><given-names>A. J.</given-names></name> &amp; <name><surname>Cui</surname><given-names>W.</given-names></name>
+<article-title>Stably transfected human embryonic stem cell clones express OCT4-specific green fluorescent protein and maintain self-renewal and pluripotency</article-title>. <source>Stem Cells</source>
+<volume>23</volume>, <fpage>124</fpage>&#x2013;<lpage>133</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">15625129</pub-id></mixed-citation>
+      </ref>
+      <ref id="b42">
+        <mixed-citation publication-type="journal"><name><surname>Hata</surname><given-names>A.</given-names></name>, <name><surname>Lo</surname><given-names>R. S.</given-names></name>, <name><surname>Wotton</surname><given-names>D.</given-names></name>, <name><surname>Lagna</surname><given-names>G.</given-names></name> &amp; <name><surname>Massague</surname><given-names>J.</given-names></name>
+<article-title>Mutations increasing autoinhibition inactivate tumour suppressors Smad2 and Smad4</article-title>. <source>Nature</source>
+<volume>388</volume>, <fpage>82</fpage>&#x2013;<lpage>87</lpage> (<year>1997</year>).<pub-id pub-id-type="pmid">9214507</pub-id></mixed-citation>
+      </ref>
+      <ref id="b43">
+        <mixed-citation publication-type="journal"><name><surname>Ramaswamy</surname><given-names>S.</given-names></name>
+<etal/>. <article-title>Regulation of G1 progression by the PTEN tumor suppressor protein is linked to inhibition of the phosphatidylinositol 3-kinase/Akt pathway</article-title>. <source>Proc. Natl Acad. Sci. USA</source>
+<volume>96</volume>, <fpage>2110</fpage>&#x2013;<lpage>2115</lpage> (<year>1999</year>).<pub-id pub-id-type="pmid">10051603</pub-id></mixed-citation>
+      </ref>
+      <ref id="b44">
+        <mixed-citation publication-type="journal"><name><surname>Sarbassov</surname><given-names>D. D.</given-names></name>
+<etal/>. <article-title>Rictor, a novel binding partner of mTOR, defines a rapamycin-insensitive and raptor-independent pathway that regulates the cytoskeleton</article-title>. <source>Curr. Biol.</source>
+<volume>14</volume>, <fpage>1296</fpage>&#x2013;<lpage>1302</lpage> (<year>2004</year>).<pub-id pub-id-type="pmid">15268862</pub-id></mixed-citation>
+      </ref>
+      <ref id="b45">
+        <mixed-citation publication-type="journal"><name><surname>Ovando-Roche</surname><given-names>P.</given-names></name>, <name><surname>Yu</surname><given-names>J. S.</given-names></name>, <name><surname>Testori</surname><given-names>S.</given-names></name>, <name><surname>Ho</surname><given-names>C.</given-names></name> &amp; <name><surname>Cui</surname><given-names>W.</given-names></name>
+<article-title>TRF2-mediated stabilization of hREST4 is critical for the differentiation and maintenance of neural progenitors</article-title>. <source>Stem Cells</source>
+<volume>32</volume>, <fpage>2111</fpage>&#x2013;<lpage>2122</lpage> (<year>2014</year>).<pub-id pub-id-type="pmid">24740933</pub-id></mixed-citation>
+      </ref>
+      <ref id="b46">
+        <mixed-citation publication-type="journal"><name><surname>Sarbassov</surname><given-names>D. D.</given-names></name>, <name><surname>Guertin</surname><given-names>D. A.</given-names></name>, <name><surname>Ali</surname><given-names>S. M.</given-names></name> &amp; <name><surname>Sabatini</surname><given-names>D. M.</given-names></name>
+<article-title>Phosphorylation and regulation of Akt/PKB by the rictor-mTOR complex</article-title>. <source>Science</source>
+<volume>307</volume>, <fpage>1098</fpage>&#x2013;<lpage>1101</lpage> (<year>2005</year>).<pub-id pub-id-type="pmid">15718470</pub-id></mixed-citation>
+      </ref>
+      <ref id="b47">
+        <mixed-citation publication-type="journal"><name><surname>Szulc</surname><given-names>J.</given-names></name>, <name><surname>Wiznerowicz</surname><given-names>M.</given-names></name>, <name><surname>Sauvain</surname><given-names>M. O.</given-names></name>, <name><surname>Trono</surname><given-names>D.</given-names></name> &amp; <name><surname>Aebischer</surname><given-names>P.</given-names></name>
+<article-title>A versatile tool for conditional gene expression and knockdown</article-title>. <source>Nat. Methods</source>
+<volume>3</volume>, <fpage>109</fpage>&#x2013;<lpage>116</lpage> (<year>2006</year>).<pub-id pub-id-type="pmid">16432520</pub-id></mixed-citation>
+      </ref>
+      <ref id="b48">
+        <mixed-citation publication-type="journal"><name><surname>Watanabe</surname><given-names>K.</given-names></name>
+<etal/>. <article-title>A ROCK inhibitor permits survival of dissociated human embryonic stem cells</article-title>. <source>Nat. Biotechnol.</source>
+<volume>25</volume>, <fpage>681</fpage>&#x2013;<lpage>686</lpage> (<year>2007</year>).<pub-id pub-id-type="pmid">17529971</pub-id></mixed-citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn>
+        <p><bold>Author contributions</bold> J.S.L.Y. and W.C. conceived the study and designed experiments. T.S.R. and J.S.L.Y. performed hESC differentiation experiments and analysis. N.M. and R.C. generated mutant Smad2 construct and recombinant Smad2 protein. M.K.H. characterized the response of PC3 cells to PI3K/TGF-&#x3B2;. J.S.L.Y. and S.-K.W. analysed the molecular mechanisms between Smad2/3 and Nedd4L, Akt and mTORC2. W.C. and J.S.L.Y. wrote the manuscript.</p>
+      </fn>
+    </fn-group>
+  </back>
+  <floats-group>
+    <fig id="f1">
+      <label>Figure 1</label>
+      <caption>
+        <title>Inhibition of PI3K signalling promotes differentiation of hESCs to the definitive endoderm (DE).</title>
+        <p>(<bold>a</bold>) Schematic illustrating the DE and hepatocyte differentiation protocol. (<bold>b</bold>) H1 hESCs cultured in MEF-CM (CM) were transferred into defined medium, RPMI/B27, for 1&#x2009;h (time 0) prior to treatment with Activin A&#xB1;LY294002 (LY). Cell lysates were collected at indicated time points and analysed by immunoblot. (<bold>c</bold>) Gene expression analysis by qRT&#x2013;PCR in Activin A-treated hESCs with (red line) or without (blue line) LY. Data represent mean&#xB1;s.d. from six measurements of two independent differentiations. (<bold>d</bold>) Immunoblot showing mesendoderm marker expression in hESCs treated for 24&#x2009;h with indicated factors. (<bold>e</bold>) Percentage of CXCR4-positive cells by flow cytometry in hESCs with or without indicated treatment for 3 days. Data represent mean&#xB1;s.d. from three independent biological samples. <italic>P</italic> value was calculated using the Student's <italic>t</italic>-test. (<bold>f</bold>) Immunostaining with Brachyury and Sox17 antibodies in hESCs treated as indicated. Scale bar, 50&#x2009;&#x3BC;m. (<bold>g</bold>) hESCs were initially treated with Activin A&#xB1;LY and then further differentiated to hepatocytes. Phase-contrast images (Phase-con) and immunostaining with AFP and albumin antibodies are presented. Scale bar, 50&#x2009;&#x3BC;m.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f1"/>
+    </fig>
+    <fig id="f2">
+      <label>Figure 2</label>
+      <caption>
+        <title>Suppression of PI3K signalling prolongs Activin-induced Smad2/3 activity.</title>
+        <p>(<bold>a</bold>,<bold>b</bold>) hESCs were treated with Activin A or/and LY for the indicted time points before being subjected to immunoblotting analysis. Numbers in <bold>a</bold> represent the quantification of activated Smad2 and Smad3. Upper panels in <bold>b</bold> are representative immunoblot and lower panels are histograms of densitometric measurements from three independent biological samples. (<bold>c</bold>) Luciferase assay in hESCs co-transfected with pGL3-CAGA<sub>12</sub>-luc and renilla constructs and treated for 6&#x2009;h. Data show mean&#xB1;s.d. of three independent transfection experiments. (<bold>d</bold>) Messenger RNA expression of indicated markers by qRT&#x2013;PCR. Bar graphs indicate fold induction. Data represent mean&#xB1;s.d. of six measurements from two independent experiments. **<italic>P</italic>&lt;0.001 and *<italic>P</italic>&#x2264;0.05 by the Student's <italic>t</italic>-test. LY, LY294002.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f2"/>
+    </fig>
+    <fig id="f3">
+      <label>Figure 3</label>
+      <caption>
+        <title>Inhibition of PI3K reduces Smad2/3 interaction with Nedd4L and subsequent ubiquitination.</title>
+        <p>(<bold>a</bold>) Scheme of treatment for <bold>b</bold> and <bold>c</bold>. (<bold>b</bold>,<bold>c</bold>) Representative immunoblot (right) and quantifications (left) of activated Smad2 (Smad2-pTail) in hESCs treated as illustrated in <bold>a</bold> with SB&#xB1;LY (<bold>b</bold>) or SB&#xB1;MG132 (<bold>c</bold>). Graphs represent mean&#xB1;s.d. from three independent experiments. (<bold>d</bold>,<bold>e</bold>) hESCs treated with Activin A&#xB1;LY for 1&#x2009;h were analysed by Smad2 co-immunoprecipitation with indicated antibodies. *<italic>P</italic>&#x2264;0.05 by the Student's <italic>t</italic>-test. SB, SB431542; LY, LY294002; MG, MG132; Ub, ubiquitin.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f3"/>
+    </fig>
+    <fig id="f4">
+      <label>Figure 4</label>
+      <caption>
+        <title>PI3K regulates Nedd4L-mediated Smad2/3 degradation via phosphorylation of the T220/T179 linker residue.</title>
+        <p>(<bold>a</bold>) A schematic illustrating structural domains of Smad2 protein. The C-terminal and linker phosphorylation sites as well as the E3 ubiquitin ligase-binding PPXY motif are indicated. (<bold>b</bold>,<bold>c</bold>) Representative immunoblot (<bold>b</bold>) and quantification (<bold>c</bold>) showing significant reduction of Smad2-pT220 in hESCs at 6&#x2009;h post treatment with Activin A+LY. Data in <bold>c</bold> represent mean&#xB1;s.d. from three independent experiments. *<italic>P</italic>&lt;0.05 (Student <italic>t</italic>-test). (<bold>d</bold>) Immunoblot showing that PC3 cells exhibited a similar pattern of Smad2 phosphorylation at various residues as that of hESCs in response to Activin&#xB1;LY treatment after overnight starvation. (<bold>e</bold>) Nedd4L-mediated Smad2/3 ubiquitination requires phosphorylation at both linker T220/T179 and C-terminal SxS sites. PC3 cells were treated with Activin A&#xB1;LY for 1&#x2009;h, with MG132 added into the cultures 30&#x2009;min prior to lysis. Smad2/3 immunoprecipitates were analysed by immunoblotting with indicated antibodies. (<bold>f</bold>) Immunoblot showing that Smad2-T220V mutant abolished the effect of LY on Activin-induced Smad2 activation. PC3 cells expressing Flag-tagged WT or T220V mutant (T220V) Smad2 were starved overnight, followed by treatment for 1&#x2009;h with Activin A&#xB1;LY. (<bold>g</bold>) qRT&#x2013;PCR showing that hESCs expressing Smad2-T220V gave rise to higher levels of DE gene expression in response to Activin A. (<bold>h</bold>) Knockdown of Nedd4L in PC3 cells abolished the effect of LY on Activin-induced Smad2 activation. (<bold>i</bold>) qRT&#x2013;PCR showing hESCs of Nedd4L knockdown exhibiting higher DE gene expression. hESCs in <bold>g</bold> and <bold>i</bold> were treated with Activin A for 2 days before the analysis, and data represent mean&#xB1;s.d. from at least six measurements of two independent experiments.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f4"/>
+    </fig>
+    <fig id="f5">
+      <label>Figure 5</label>
+      <caption>
+        <title>Phosphorylation of Smad2/3 linker residues are differentially regulated by various signalling pathways.</title>
+        <p>(<bold>a</bold>,<bold>b</bold>) Immunoblot of Smad2/3 phosphorylation in hESCs that were pre-treated with Activin A, then incubated with indicated inhibitors for 1&#x2009;h (<bold>a</bold>) or 6&#x2009;h (<bold>b</bold>). (<bold>c</bold>) Immunoblot with Erk1/2 antibodies on cell extracts from hESCs with indicated treatments. (<bold>d</bold>) hESCs were starved for1&#x2009;h in RPMI medium followed by treatment with either LY or HI for 1&#x2009;h before being analysed by immunoblotting. (<bold>e</bold>) Hep3B cells transiently expressing either green fluorescent protein (GFP) or the various forms of Akt as indicated were starved overnight while GFP-expressing cells were treated with either LY or HI for 1&#x2009;h before harvest for immunoblot. (<bold>f</bold>) <italic>In vitro</italic> kinase assay. Active Akt was isolated from PC3 cells by immunoprecipitation and incubated with recombinant GST-Flag-tagged wild-type (WT) or T220V mutant Smad2 in the presence of ATP. The protein mixtures were then resolved by SDS&#x2013;polyacrylamide gel electrophoresis and analysed by immunoblotting with indicated antibodies. Commercially bought Erk2 and GST-GSK3 were used as positive controls. HI represents co-treatment with heregulin and IGF-1.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f5"/>
+    </fig>
+    <fig id="f6">
+      <label>Figure 6</label>
+      <caption>
+        <title>mTORC2 regulates Smad2/3 activity by modulating the phosphorylation of T220/T179 residue.</title>
+        <p>(<bold>a</bold>) Effect of rapamycin on Smad2/3 signalling. PC3 cells were treated with rapamycin in the presence of Activin A or HI for 6&#x2009;h and then harvested for immunoblot with indicated antibodies. (<bold>b</bold>) Effect of Torin treatments on Activin-Smad2/3 signalling. Immunoblot of PC3 cells treated similar as in <bold>a</bold> but replacing rapamycin with Torin-2 (Torin). (<bold>c</bold>,<bold>d</bold>) Reduction of Smad2/3-pT220/T179 in rictor-shRNA knockdown PC3 cells (<bold>c</bold>) and in rictor null MEF (<bold>d</bold>). Ectopic expression of human rictor in rictor null MEF reverted the levels of Smad2/3-pT220/T179. (<bold>e</bold>,<bold>f</bold>) Knockdown of rictor in hESCs accelerated morphological changes associated with DE specification (<bold>e</bold>) and increased expression of DE markers (<bold>f</bold>) in response to Activin A. Scale bar, 100&#x2009;&#x3BC;m. hESCs in <bold>f</bold> were treated with Activin A for 2 days before the analysis and data represent mean&#xB1;s.d. from at least six measurements of two independent experiments. (<bold>g</bold>) <italic>In vitro</italic> kinase assay of mTORC2 on Smad2-T220 phosphorylation. mTORC2 complexes were isolated by immunoprecipitation with rictor antibody and incubated with recombinant GST-Flag-Smad2 or inactive Akt in the presence of ATP. The protein mixtures were then resolved by SDS&#x2013;polyacrylamide gel electrophoresis and analysed by immunoblot.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f6"/>
+    </fig>
+    <fig id="f7">
+      <label>Figure 7</label>
+      <caption>
+        <title>Inhibition of mTOR enhances DE differentiation of hESCs.</title>
+        <p>(<bold>a</bold>) qRT&#x2013;PCR showing gene expression in hESCs treated with Activin A&#xB1;Torin for 2 days. Data represent mean&#xB1;s.d. of six measurements from two independent experiments. (<bold>b</bold>) Immunoblot showing protein expression in hESCs treated as in <bold>a</bold>. (<bold>c</bold>) Phase-contrast images of hESCs treated for 3 days with Activin A together with either LY or Torin. Scale bar, 100&#x2009;&#x3BC;m. (<bold>d</bold>) Phase-contrast images of the cells from <bold>c</bold> that were further differentiated by a hepatic differentiation protocol as shown in <xref ref-type="fig" rid="f1">Fig. 1</xref>. Days of differentiation are indicated. Scale bar, 50&#x2009;&#x3BC;m.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f7"/>
+    </fig>
+    <fig id="f8">
+      <label>Figure 8</label>
+      <caption>
+        <title>Model depicting a possible mechanism accounting for the inhibitory effect of PI3K/mTORC2 on the Activin-induced DE differentiation of hESCs.</title>
+        <p>&#x2003;&#x2003;&#x2003;.</p>
+      </caption>
+      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ncomms8212-f8"/>
+    </fig>
+  </floats-group>
+</article>
+</pmc-articleset>

@@ -4,6 +4,7 @@ import java.io.File
 import java.nio.file.Path
 
 import ai.lum.odinson.ExtractorEngine
+import ai.lum.common.ConfigUtils._
 import com.typesafe.config.ConfigFactory
 
 object TestUtils {
@@ -18,4 +19,5 @@ object TestUtils {
 
   val extractorEngine = new ExtractorEngine(indexDir)
 
+  println("ExtractorEngine loaded w/o asplodin'")
 }

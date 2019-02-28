@@ -5,6 +5,7 @@ libraryDependencies ++= {
   val luceneVersion = "6.6.5"
 
   Seq(
+    "org.scalactic" %% "scalactic" % "3.0.5",
     "org.scalatest" %% "scalatest" % "3.0.5" % "test",
     "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
     "ch.qos.logback" %  "logback-classic" % "1.1.10",
