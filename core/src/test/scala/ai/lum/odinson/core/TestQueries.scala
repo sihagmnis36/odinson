@@ -34,13 +34,16 @@ class TestQueries extends FlatSpec with Matchers {
   it should "limit search by parent-doc query" in {
     val res = extractorEngine.query("phosphorylation", "title:Proteomic")
     res.scoreDocs.foreach{ d =>
-      extractorEngine.doc(d.doc).getField("docId").stringValue() should be ("10.1186/1559-0275-10-1")
+      val docId = extractorEngine.doc(d.doc).getField("docId").stringValue()
+      docId should be ("10.1186/1559-0275-10-1")
     }
-    extractorEngine.query("phosphorylation", "title:Proteomic", 1).scoreDocs.length should be (1)
+
+    extractorEngine.query("phosphorylation", "title:Proteomic", 1).scoreDocs should have length 1
   }
 
   it should "find mandatory capture groups" in {
-    val res = extractorEngine.query("(?<trigger> phosphorylation) >nmod_of (?<theme> [])")
+    val q = "(?<trigger> phosphorylation) >nmod_of (?<theme> [])"
+    val res = extractorEngine.query(q)
     res.scoreDocs should not be empty
     res.scoreDocs.foreach{d =>
       d.matches.foreach{ swc =>
@@ -51,16 +54,30 @@ class TestQueries extends FlatSpec with Matchers {
   }
 
   it should "limit spans by single-parameter quantification" in {
-    val res = extractorEngine.query("(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2})")
+    val q = "(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2})"
+    val res = extractorEngine.query(q)
     res.scoreDocs should not be empty
-    val themes = res.scoreDocs.flatMap(_.matches.flatMap(_.captures.filter(_._1 == "theme").map(_._2)))
-    themes.foreach(s => s.interval.length should be (2))
+    val themes = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "theme")
+        val themeSpans = themeCaptures.map(_._2.interval)
+        themeSpans
+      }
+    }
+    themes.foreach(s => s should have length 2)
   }
 
   it should "limit spans by quantification range with specified endpoints" in {
-    val res = extractorEngine.query("(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2, 3})")
+    val q = "(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2, 3})"
+    val res = extractorEngine.query(q)
     res.scoreDocs should not be empty
-    val themes = res.scoreDocs.flatMap(_.matches.flatMap(_.captures.filter(_._1 == "theme").map(_._2.interval.length)))
+    val themes = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "theme")
+        val themeLengths = themeCaptures.map(_._2.interval.length)
+        themeLengths
+      }
+    }
     themes.foreach{ l =>
       l should be >= 2
       l should be <= 3
@@ -70,9 +87,16 @@ class TestQueries extends FlatSpec with Matchers {
   }
 
   it should "limit spans by quantification range with a lower limit specified" in {
-    val res = extractorEngine.query("(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{, 3})")
+    val q = "(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{, 3})"
+    val res = extractorEngine.query(q)
     res.scoreDocs should not be empty
-    val themes = res.scoreDocs.flatMap(_.matches.flatMap(_.captures.filter(_._1 == "theme").map(_._2.interval.length)))
+    val themes = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "theme")
+        val themeLengths = themeCaptures.map(_._2.interval.length)
+        themeLengths
+      }
+    }
     themes.foreach{ l =>
       l should be <= 3
     }
@@ -82,9 +106,16 @@ class TestQueries extends FlatSpec with Matchers {
   }
 
   it should "limit spans by quantification range with an upper limit specified" in {
-    val res = extractorEngine.query("(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2, })")
+    val q = "(?<trigger> phosphorylation) >nmod_of (?<theme> [tag=NN]{2, })"
+    val res = extractorEngine.query(q)
     res.scoreDocs should not be empty
-    val themes = res.scoreDocs.flatMap(_.matches.flatMap(_.captures.filter(_._1 == "theme").map(_._2.interval.length)))
+    val themes = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "theme")
+        val themeLengths = themeCaptures.map(_._2.interval.length)
+        themeLengths
+      }
+    }
     themes.foreach{ l =>
       l should be >= 2
     }
@@ -92,5 +123,49 @@ class TestQueries extends FlatSpec with Matchers {
     themes should contain (3)
   }
 
+  it should "understand Kleene star for tokens" in {
+    val res = extractorEngine.query("transcription (?<modified> [tag=NN]*)")
+    res.scoreDocs should not be empty
+    val wholeSpans = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.map{ mtch =>
+        mtch.span.interval.length
+      }
+    }
+    wholeSpans foreach (_ should be >= 1)
+    wholeSpans should contain (1)
+
+    val modified = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "modified")
+        val themeLengths = themeCaptures.map(_._2.interval.length)
+        themeLengths
+      }
+    }
+    modified should contain (1)
+    modified should contain (2)
+    modified should contain (3)
+  }
+
+  it should "understand Kleene plus for tokens" in {
+    val res = extractorEngine.query("transcription (?<modified> [tag=NN]+)")
+    res.scoreDocs should not be empty
+    val wholeSpans = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.map{ mtch =>
+        mtch.span.interval.length
+      }
+    }
+    wholeSpans foreach (_ should be >= 2)
+
+    val modified = res.scoreDocs.flatMap{ scoreDoc =>
+      scoreDoc.matches.flatMap{ mtch =>
+        val themeCaptures = mtch.captures.filter(_._1 == "modified")
+        val themeLengths = themeCaptures.map(_._2.interval.length)
+        themeLengths
+      }
+    }
+    modified should contain (1)
+    modified should contain (2)
+    modified should contain (3)
+  }
 
 }
