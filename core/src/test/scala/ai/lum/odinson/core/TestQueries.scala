@@ -168,4 +168,14 @@ class TestQueries extends FlatSpec with Matchers {
     modified should contain (3)
   }
 
+  it should "understand Kleene star for dependencies" in {
+    val res = extractorEngine.query("[tag=/NN.*/] >dobj >/nmod.*|conj/* [tag=/NN.*/]")
+    res.scoreDocs should not be empty
+  }
+
+  it should "understand Kleene plus for dependencies" in {
+    val res = extractorEngine.query("[tag=/NN.*/] >/nmod.*|conj/+ [tag=/NN.*/]")
+    res.scoreDocs should not be empty
+  }
+
 }
