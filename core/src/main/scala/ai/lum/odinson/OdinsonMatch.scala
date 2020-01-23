@@ -2,6 +2,7 @@ package ai.lum.odinson
 
 import scala.util.hashing.MurmurHash3._
 import ai.lum.common.Interval
+import ai.lum.odinson.digraph.TraversedPath
 
 case class NamedCapture(name: String, capturedMatch: OdinsonMatch)
 
@@ -75,6 +76,7 @@ class NGramMatch(
 class GraphTraversalMatch(
   val srcMatch: OdinsonMatch,
   val dstMatch: OdinsonMatch,
+  val traversedPath: TraversedPath,
 ) extends OdinsonMatch {
 
   val start: Int = dstMatch.start
