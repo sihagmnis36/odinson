@@ -10,13 +10,24 @@ class QueryParser(
 
   import QueryParser._
 
-  // parser's entry point
-  def parseQuery(query: String) = parse(query.trim, odinsonPattern(_)).get.value
-  def parseQuery2(query: String) = parse(query.trim, odinsonPattern(_))
+  /** The parser's entrypoint. You need to specify both
+   *  the pattern and its type. Returns a Parsed object
+   *  that represents either the parser's success or failure.
+   */
+  def parsePattern(pattern: String, patternType: String): Parsed = {
+    // invoke the appropriate parser
+    val result = patternType match {
+      case "basic" => parse(pattern, basicPattern(_))
+      case "event" => parse(pattern, eventPattern(_))
+    }
+    // wrap result in a Parsed object
+    result match {
+      case s: Parsed.Success[Ast.Pattern] => Success(s.get.value)
+      case f: Parsed.Failure => Failure(f.index, f.msg, f.trace().aggregateMsg)
+    }
+  }
 
-  // FIXME temporary entrypoint
-  def parseEventQuery(query: String) = parse(query.trim, eventPattern(_), verboseFailures = true).get.value
-
+  // top symbol for event patterns
   def eventPattern[_: P]: P[Ast.EventPattern] = {
     P(Start ~ "trigger" ~ "=" ~ surfacePattern ~ argumentPattern.rep(1) ~ End).map {
       case (trigger, arguments) => Ast.EventPattern(trigger, arguments.toList)
@@ -107,8 +118,8 @@ class QueryParser(
     }
   }
 
-  // grammar's top-level symbol
-  def odinsonPattern[_: P]: P[Ast.Pattern] = {
+  // top symbol for basic patterns
+  def basicPattern[_: P]: P[Ast.Pattern] = {
     P(Start ~ graphTraversalPattern ~ End)
   }
 
@@ -432,5 +443,26 @@ object QueryParser {
   sealed trait Quantifier
   case class GreedyQuantifier(min: Int, max: Option[Int]) extends Quantifier
   case class LazyQuantifier(min: Int, max: Option[Int]) extends Quantifier
+
+  /** The result of a parse. May be a Success or a Failure. */
+  sealed trait Parsed {
+    def isSuccess: Boolean
+    def get: Ast.Pattern
+  }
+
+  /** The result of parsing a pattern successfully. */
+  case class Success(ast: Ast.Pattern) extends Parsed {
+    val isSuccess: Boolean = true
+    val get: Ast.Pattern = ast
+  }
+
+  /** The result of failing to parse a pattern. */
+  case class Failure(index: Int, msg: String, aggregateMsg: String) extends Parsed {
+    val isSuccess: Boolean = false
+    def get: Ast.Pattern = throw new OdinsonParseException(msg, aggregateMsg, index)
+  }
+
+  /** Exception that corresponds to a parse failure. */
+  class OdinsonParseException(msg: String, val aggregateMsg: String, val index: Int) extends Exception(msg)
 
 }
