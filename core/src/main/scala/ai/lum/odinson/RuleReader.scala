@@ -40,24 +40,26 @@ case class Extractor(
 
 class RuleReader(val compiler: QueryCompiler) {
 
-  /** gets the contents of a rule file and returns a sequence of extractors ready to be used */
-  def compileRuleFile(input: String): Seq[Extractor] = {
-    compileRuleFile(input, Map.empty)
+  /** gets the contents of a rule file and returns a sequence of extractors
+   *  ready to be used
+   */
+  def compileRules(input: String): Seq[Extractor] = {
+    compileRules(input, Map.empty)
   }
 
   /** Gets the contents of a rule file as well as a map of variables.
-   *  Returns a sequence of extractors ready to be used.
-   *  The variables passed as an argument will override the variables declared in the file.
+   *  Returns a sequence of extractors ready to be used. The variables
+   *  passed as an argument will override the variables declared in the file.
    */
-  def compileRuleFile(input: String, variables: Map[String, String]): Seq[Extractor] = {
-    mkExtractors(parseRuleFile(input), variables)
+  def compileRules(input: String, variables: Map[String, String]): Seq[Extractor] = {
+    mkExtractors(parseRules(input), variables)
   }
 
   /** Parses the content of the rule file and returns a RuleFile object
    *  that contains the parsed rules and the variables declared in the file.
    *  Note that variable replacement hasn't happened yet.
    */
-  def parseRuleFile(input: String): RuleFile = {
+  def parseRules(input: String): RuleFile = {
     val yaml = new Yaml(new Constructor(classOf[JMap[String, Any]]))
     val master = yaml.load(input).asInstanceOf[JMap[String, Any]].asScala.toMap
     val variables = mkVariables(master)
@@ -100,11 +102,7 @@ class RuleReader(val compiler: QueryCompiler) {
     val ruletype = varsub(rule.ruletype)
     val pattern = varsub(rule.pattern)
     // compile query
-    val query = ruletype match {
-      case "basic" => compiler.compile(pattern)
-      case "event" => compiler.compileEventQuery(pattern)
-      case t => sys.error(s"invalid rule type '$t'")
-    }
+    val query = compiler.compile(pattern, ruletype)
     // return an extractor
     Extractor(name, label, query)
   }

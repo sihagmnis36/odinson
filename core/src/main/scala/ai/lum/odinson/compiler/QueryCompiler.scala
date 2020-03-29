@@ -41,40 +41,20 @@ class QueryCompiler(
     state = Some(s)
   }
 
-  // FIXME temporary entrypoint
-  def compileEventQuery(pattern: String): OdinsonQuery = {
-    val ast = parser.parseEventQuery(pattern)
+  /** Gets a pattern and a pattern type and returns an OdinsonQuery */
+  def compile(pattern: String, patternType: String): OdinsonQuery = {
+    val ast = parser.parsePattern(pattern, patternType).get
+    compile(ast)
+  }
+
+  /** Gets an AST and returns an OdinsonQuery */
+  def compile(ast: Ast.Pattern): OdinsonQuery = {
     val query = mkOdinsonQuery(ast)
     query.getOrElse(new FailQuery(defaultTokenField))
   }
 
-  def compile(pattern: String): OdinsonQuery = {
-    val ast = parser.parseQuery(pattern)
-    val query = mkOdinsonQuery(ast)
-    query.getOrElse(new FailQuery(defaultTokenField))
-  }
-
-  def mkQuery(pattern: String): OdinsonQuery = {
-    compile(pattern)
-  }
-
-  def mkQuery(pattern: String, parentPattern: String): OdinsonQuery = {
-    val query = compile(pattern)
-    val parentQuery = queryParser.parse(parentPattern)
-    mkQuery(query, parentQuery)
-  }
-
-  def mkQuery(pattern: String, parentQuery: Query): OdinsonQuery = {
-    val query = compile(pattern)
-    mkQuery(query, parentQuery)
-  }
-
-  def mkQuery(query: OdinsonQuery, parentPattern: String): OdinsonQuery = {
-    val parentQuery = queryParser.parse(parentPattern)
-    mkQuery(query, parentQuery)
-  }
-
-  def mkQuery(query: OdinsonQuery, parentQuery: Query): OdinsonQuery = {
+  /** Filter query by the contents of the parent document */
+  def addParentFilter(query: OdinsonQuery, parentQuery: Query): OdinsonQuery = {
     // FIXME the strings "type" and "parent" should probably be defined in the config
     val termQuery = new TermQuery(new Term("type", "parent"))
     val parentFilter = new QueryBitSetProducer(termQuery)
