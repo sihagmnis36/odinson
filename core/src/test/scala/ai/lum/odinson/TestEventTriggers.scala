@@ -19,7 +19,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |    pattern: |
       |      animals >nmod_such_as >/conj.*/? (?<result>${result})
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
     val expectedResults = List("hedgehogs", "coypu", "wild cloven-footed animals", "deer", "zoo animals")
@@ -40,7 +40,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = animals
       |      result = >nmod_such_as >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
     val expectedResults = List("hedgehogs", "coypu", "wild cloven-footed animals", "deer", "zoo animals")
@@ -61,7 +61,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = wild? animals
       |      result = >nmod_such_as >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
     val expectedResults = List("hedgehogs", "coypu", "wild cloven-footed animals", "deer", "zoo animals")
@@ -82,7 +82,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = [tag=JJ]* ([tag=NNS] [tag=JJ])?
       |      result = >nmod_such_as >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val triggers = mentions.map(m => ee.getString(m.luceneDocId, m.odinsonMatch.asInstanceOf[EventMatch].trigger))
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
@@ -106,7 +106,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = [tag=DT | tag=JJ] [tag=JJ]
       |      result = <amod [lemma=animal]
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val triggers = mentions.map(m => ee.getString(m.luceneDocId, m.odinsonMatch.asInstanceOf[EventMatch].trigger))
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
@@ -130,7 +130,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = some []* animals
       |      result = (>nmod_such_as | >nmod_including) >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val triggers = mentions.map(m => ee.getString(m.luceneDocId, m.odinsonMatch.asInstanceOf[EventMatch].trigger))
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
@@ -154,7 +154,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = some []* animals
       |      result = (>nmod_such_as | >nmod_including) >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors, allowTriggerOverlaps = true)
     val triggers = mentions.map(m => ee.getString(m.luceneDocId, m.odinsonMatch.asInstanceOf[EventMatch].trigger))
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
@@ -183,7 +183,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = some []*? animals
       |      result = >nmod_such_as >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val triggers = mentions.map(m => ee.getString(m.luceneDocId, m.odinsonMatch.asInstanceOf[EventMatch].trigger))
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
@@ -206,7 +206,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |    pattern: |
       |      animals >nmod_such_as >/conj.*/? (?<result>${result})
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
     val expectedResults = List("rabbit", "possum", "quail", "badger", "iguana", "armadillo", "variety of river fish")
@@ -227,7 +227,7 @@ class TestEventTriggers extends FlatSpec with Matchers {
       |      trigger = animals
       |      result = >nmod_such_as >/conj.*/? ${result}
       |""".stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     val animals = mentions.map(m => ee.getString(m.luceneDocId, m.arguments("result").head.odinsonMatch))
     val expectedResults = List("rabbit", "possum", "quail", "badger", "iguana", "armadillo", "variety of river fish")

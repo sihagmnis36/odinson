@@ -25,7 +25,7 @@ class TestRuleFile extends FlatSpec with Matchers {
       |      subject: ^NP = >nsubj ${chunk}
       |      object: ^NP = >dobj ${chunk}
     """.stripMargin
-    val extractors = ee.ruleReader.compileRuleFile(rules)
+    val extractors = ee.compileRules(rules)
     val mentions = ee.extractMentions(extractors)
     mentions should have size 1
     val m = mentions.head.odinsonMatch

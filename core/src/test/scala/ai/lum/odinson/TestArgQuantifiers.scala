@@ -16,7 +16,7 @@ class TestArgQuantifiers extends FlatSpec with Matchers {
       trigger = consumption
       theme: ^dessert = >nmod_of >conj? [entity=B-dessert][entity=I-dessert]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 2
@@ -36,7 +36,7 @@ class TestArgQuantifiers extends FlatSpec with Matchers {
       trigger = consumption
       theme: ^dessert? = >nmod_of >conj? [entity=B-dessert][entity=I-dessert]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 2
@@ -56,7 +56,7 @@ class TestArgQuantifiers extends FlatSpec with Matchers {
       trigger = consumption
       theme: ^dessert+ = >nmod_of >conj? [entity=B-dessert][entity=I-dessert]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -76,7 +76,7 @@ class TestArgQuantifiers extends FlatSpec with Matchers {
       trigger = consumption
       theme: ^dessert* = >nmod_of >conj? [entity=B-dessert][entity=I-dessert]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1

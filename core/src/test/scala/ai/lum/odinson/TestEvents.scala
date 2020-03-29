@@ -24,7 +24,7 @@ class TestEvents extends FlatSpec with Matchers {
       subject: ^NP = >nsubj [chunk=B-NP][chunk=I-NP]*
       object: ^NP = >dobj [chunk=B-NP][chunk=I-NP]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -47,7 +47,7 @@ class TestEvents extends FlatSpec with Matchers {
     """
     // the above rule should match {bears} and {gummy bears}
     // and then keep only {gummy bears} because the quantifier `?` is greedy
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -68,7 +68,7 @@ class TestEvents extends FlatSpec with Matchers {
       subject: ^NP = >nsubj
       object: ^NP = >dobj
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -89,7 +89,7 @@ class TestEvents extends FlatSpec with Matchers {
       subject = >nsubj [chunk=B-NP][chunk=I-NP]*
       object = >dobj [chunk=B-NP][chunk=I-NP]*
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -110,7 +110,7 @@ class TestEvents extends FlatSpec with Matchers {
       subject = >nsubj
       object = >dobj
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -131,18 +131,20 @@ class TestEvents extends FlatSpec with Matchers {
       subject: ^NP = >nsubj xxx
       object: ^NP = >dobj yyy
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     noException should be thrownBy ee.query(q, 1)
   }
 
   it should "not find event with mentions from the state when the state is empty" in {
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (0)
   }
 
   it should "populate the state with NPs" in {
-    val results = ee.query("[chunk=B-NP][chunk=I-NP]*")
+    val pattern = "[chunk=B-NP][chunk=I-NP]*"
+    val q = ee.compilePattern(pattern, "basic")
+    val results = ee.query(q)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 2
     for {
@@ -161,7 +163,7 @@ class TestEvents extends FlatSpec with Matchers {
   }
 
   it should "find event with mentions from the state when the state is populated" in {
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1

@@ -17,7 +17,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       theme: ^food = >dobj
       tool: ^tool = >nmod_with >conj?
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 2
@@ -38,7 +38,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       theme: ^food = >dobj
       tool: ^tool+ = >nmod_with >conj?
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
@@ -56,7 +56,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       theme: ^food = >dobj
       tool: ^tool* = >nmod_with >conj?
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (2)
     results.scoreDocs(0).matches should have size 1
@@ -81,7 +81,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       theme: ^food? = >dobj
       tool: ^tool = >nmod_with >conj?
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 2
@@ -103,7 +103,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       tool: ^tool = >nmod_with >conj?
       location: ^place = >nmod_at
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (0)
   }
@@ -115,7 +115,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       tool: ^tool? = >nmod_with >conj?
       location: ^place? = >nmod_at
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (2)
     // sentence 1
@@ -146,7 +146,7 @@ class TestMoreEvents extends FlatSpec with Matchers {
       tool: ^tool? = >nmod_with >conj?
       location: ^place = >nmod_at
     """
-    val q = ee.compiler.compileEventQuery(pattern)
+    val q = ee.compilePattern(pattern, "event")
     val results = ee.query(q, 5)
     results.totalHits should equal (1)
     results.scoreDocs(0).matches should have size 1

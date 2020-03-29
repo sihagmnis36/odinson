@@ -11,25 +11,33 @@ class TestFields extends FlatSpec with Matchers {
   val ee = TestUtils.mkExtractorEngine(doc)
 
   "Odinson" should "be case insensitive on the norm field (implicitly)" in {
-    val results = ee.query("ATE")
+    val pattern = "ATE"
+    val query = ee.compilePattern(pattern, "basic")
+    val results = ee.query(query)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
   }
 
   it should "be case insensitive on the norm field (explicitly)" in {
-    val results = ee.query("[norm=ATE]")
+    val pattern = "[norm=ATE]"
+    val query = ee.compilePattern(pattern, "basic")
+    val results = ee.query(query)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
   }
 
   it should "match with correct case on the raw field" in {
-    val results = ee.query("[raw=ate]")
+    val pattern = "[raw=ate]"
+    val query = ee.compilePattern(pattern, "basic")
+    val results = ee.query(query)
     results.totalHits should equal (1)
     results.scoreDocs.head.matches should have size 1
   }
 
   it should "not match with wrong case on the raw field" in {
-    val results = ee.query("[raw=ATE]")
+    val pattern = "[raw=ATE]"
+    val query = ee.compilePattern(pattern, "basic")
+    val results = ee.query(query)
     results.totalHits should equal (0)
   }
 
