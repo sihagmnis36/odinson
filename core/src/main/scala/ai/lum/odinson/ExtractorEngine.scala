@@ -3,7 +3,8 @@ package ai.lum.odinson
 import java.nio.file.Path
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer
 import org.apache.lucene.document.{ Document => LuceneDocument }
-import org.apache.lucene.search.{ BooleanClause => LuceneBooleanClause, BooleanQuery => LuceneBooleanQuery }
+import org.apache.lucene.search.{ Query, BooleanClause => LuceneBooleanClause, BooleanQuery => LuceneBooleanQuery }
+import org.apache.lucene.queryparser.classic.{ QueryParser => LuceneQueryParser }
 import org.apache.lucene.store.{ Directory, FSDirectory }
 import org.apache.lucene.index.DirectoryReader
 import org.apache.lucene.queryparser.classic.QueryParser
@@ -31,6 +32,9 @@ class ExtractorEngine(
   /** Analyzer for parent queries.  Don't skip any stopwords. */
   val analyzer = new WhitespaceAnalyzer()
 
+  /** query parser for parent doc queries */
+  val luceneQueryParser = new LuceneQueryParser("docId", analyzer)
+
   val indexReader = indexSearcher.getIndexReader()
 
   val ruleReader = new RuleReader(compiler)
@@ -55,6 +59,15 @@ class ExtractorEngine(
     val docs = indexSearcher.search(q, 10).scoreDocs.map(sd => indexReader.document(sd.doc))
     //require(docs.size == 1, s"There should be only one parent doc for a docId, but ${docs.size} found.")
     docs.head
+  }
+
+  /** Filter query by the contents of the parent document */
+  def addParentFilter(query: OdinsonQuery, parentQuery: Query): OdinsonQuery = {
+    compiler.addParentFilter(query, parentQuery)
+  }
+
+  def compileLuceneQuery(pattern: String) = {
+    luceneQueryParser.parse(pattern)
   }
 
   def compilePattern(pattern: String, patternType: String): OdinsonQuery = {

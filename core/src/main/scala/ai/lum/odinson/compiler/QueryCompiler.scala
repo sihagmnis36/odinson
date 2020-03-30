@@ -6,8 +6,6 @@ import org.apache.lucene.index._
 import org.apache.lucene.search._
 import org.apache.lucene.search.join._
 import org.apache.lucene.search.spans._
-import org.apache.lucene.queryparser.classic.{ QueryParser => LuceneQueryParser }
-import org.apache.lucene.analysis.core.WhitespaceAnalyzer
 import com.ibm.icu.text.Normalizer2
 import com.typesafe.config.Config
 import ai.lum.common.ConfigUtils._
@@ -31,9 +29,6 @@ class QueryCompiler(
   val parser = new QueryParser(allTokenFields, defaultTokenField)
 
   val normalizer = Normalizer2.getNFKCCasefoldInstance()
-
-  /** query parser for parent doc queries */
-  val queryParser = new LuceneQueryParser("docId", new WhitespaceAnalyzer)
 
   private var state: Option[State] = None
 
