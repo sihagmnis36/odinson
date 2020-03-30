@@ -186,8 +186,14 @@ class OdinsonController @Inject() (system: ActorSystem, cc: ControllerComponents
     label: String = "Mention"
   ): Unit = {
     val results = parentQuery match {
-      case None => extractorEngine.query(odinsonQuery)
-      case Some(filter) => extractorEngine.query(odinsonQuery, filter)
+      case None =>
+        val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+        extractorEngine.query(q)
+      case Some(filter) =>
+        val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+        val f = extractorEngine.compileLuceneQuery(filter)
+        val fq = extractorEngine.addParentFilter(q, f)
+        extractorEngine.query(fq)
     }
     for {
       scoreDoc <- results.scoreDocs
@@ -233,14 +239,26 @@ class OdinsonController @Inject() (system: ActorSystem, cc: ControllerComponents
           case (Some(doc), Some(score)) =>
             // continue where we left off
             parentQuery match {
-              case None => extractorEngine.query(odinsonQuery, pageSize, doc, score)
-              case Some(filter) => extractorEngine.query(odinsonQuery, filter, pageSize, doc, score)
+              case None =>
+                val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+                extractorEngine.query(q, pageSize, doc, score)
+              case Some(filter) =>
+                val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+                val f = extractorEngine.compileLuceneQuery(filter)
+                val fq = extractorEngine.addParentFilter(q, f)
+                extractorEngine.query(fq, pageSize, doc, score)
             }
           case _ =>
             // get first page
             parentQuery match {
-              case None => extractorEngine.query(odinsonQuery, pageSize)
-              case Some(filter) => extractorEngine.query(odinsonQuery, filter, pageSize)
+              case None =>
+                val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+                extractorEngine.query(q, pageSize)
+              case Some(filter) =>
+                val q = extractorEngine.compilePattern(odinsonQuery, "basic")
+                val f = extractorEngine.compileLuceneQuery(filter)
+                val fq = extractorEngine.addParentFilter(q, f)
+                extractorEngine.query(fq, pageSize)
             }
         }
         val duration = (System.currentTimeMillis() - start) / 1000f // duration in seconds
