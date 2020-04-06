@@ -36,7 +36,13 @@ object AnnotateText extends App with LazyLogging {
 
   def annotateTextFile(f: File): Document = {
     val text = f.readString()
-    val doc = processor.annotate(text)
+    val doc = processor.mkDocument(text)
+    processor.tagPartsOfSpeech(doc)
+    processor.lemmatize(doc)
+    processor.recognizeNamedEntities(doc)
+    processor.parse(doc)
+    processor.chunking(doc)
+    doc.clear()
     // use file base name as document id
     doc.id = Some(f.getBaseName())
     ProcessorsUtils.convertDocument(doc)
