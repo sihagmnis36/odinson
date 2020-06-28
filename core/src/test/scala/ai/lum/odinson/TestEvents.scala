@@ -151,6 +151,21 @@ class TestEvents extends FlatSpec with Matchers {
   }
 
   it should "find event with mentions from the state when the state is populated" in {
+    // This test must run both alone and together with other tests.
+
+    // Make sure the state isn't influenced by previous tests.
+    ee.state.clear()
+
+    {
+      // Run the previous test.
+      val query = ee.compiler.mkQuery("[chunk=B-NP][chunk=I-NP]*")
+      val results = ee.query(query)
+      results.totalHits should equal (1)
+      results.scoreDocs.head.matches should have size 2
+      ee.state.addMentions(OdinResultsIterator(results, "NP"))
+    }
+
+    // Now make use of the side-effect of the previous test.
     val q = ee.compiler.compileEventQuery(pattern)
     val results = ee.query(q, 1)
     results.totalHits should equal (1)
